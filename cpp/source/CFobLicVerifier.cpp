@@ -51,7 +51,7 @@ auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std:
     
     const auto check = DSA_verify(0,
                                   digest.data(),
-                                  digest.size(),
+                                  static_cast<int32_t>(digest.size()),
                                   sig.data(),
                                   (int)sigSize,
                                   _dsaPubKey.get());
