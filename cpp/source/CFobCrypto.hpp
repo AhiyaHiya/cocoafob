@@ -19,6 +19,8 @@ namespace CFob
     auto CompletePublicKeyPEM(const std::string partialPEM) -> std::string;
     
     auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKey) -> std::tuple<bool, ErrorMessage, DSA*>;
+    
+    auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::tuple<bool, ErrorMessage, DSA*>;
 }
 
 

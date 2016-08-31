@@ -23,14 +23,16 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
         return {false, std::string{"Empty PEM string detected"}, nullptr};
     }
     
-    const auto completeKey = IsPublicKeyComplete(publicKeyPEM) ? publicKeyPEM : CompletePublicKeyPEM(publicKeyPEM);
+    const auto completeKey = IsPublicKeyComplete(publicKeyPEM) ?
+                                publicKeyPEM :
+                                CompletePublicKeyPEM(publicKeyPEM);
 
     ERR_load_crypto_strings();
     
     auto bio    = BIO_MEM_uptr{BIO_new_mem_buf((void *)completeKey.c_str(), -1), ::BIO_free};
     auto dsa    = DSA_new();
     auto result = PEM_read_bio_DSA_PUBKEY(bio.get(), &dsa, NULL, NULL);
-#if (1)
+
     if (result != nullptr)
     {
         return {true, std::string{"Success"}, dsa};
@@ -43,15 +45,39 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
         const auto message = std::string{ERR_error_string(ERR_get_error(), nullptr)};
         return {false, message, nullptr};
     }
-#else
-    (void)result;
-    return {true, std::string{"Success"}, dsa};
+}
+    
+auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::tuple<bool, ErrorMessage, DSA*>
+{
+    if (privateKey.length()==0)
+    {
+        return {false, std::string{"Empty PEM string detected"}, nullptr};
+    }
+    
+    ERR_load_crypto_strings();
+    
+    auto dsa    = DSA_new();
+    auto bio    = BIO_MEM_uptr{BIO_new_mem_buf((void *)privateKey.c_str(), -1), ::BIO_free};
+    auto result = PEM_read_bio_DSAPrivateKey(bio.get(), &dsa, NULL, NULL);
+    
+    if (result != nullptr)
+    {
+        return {true, std::string{"Success"}, dsa};
+    }
+    else
+    {
+#if defined(DEBUG)
+        ERR_print_errors_fp(stdout);
 #endif
+        const auto message = std::string{ERR_error_string(ERR_get_error(), nullptr)};
+        return {false, message, nullptr};
+    }
 }
 
 auto IsPublicKeyComplete(const std::string publicKey) -> bool
 {
-    const auto found = publicKey.find(std::string{"-----BEGIN DSA PUBLIC KEY-----"}) != std::string::npos;
+    const auto found = publicKey.find(std::string{"-----BEGIN DSA PUBLIC KEY-----"})
+                        != std::string::npos;
     return found;
 }
 
