@@ -23,12 +23,12 @@ public:
     
 private:
     template <typename T>
-    friend T CreateCFobLicGenerator(const UTF8String privateKey );
+    friend T CreateCFobLicGenerator(const std::string privateKey );
     
     CFobLicGenerator(const std::string privateKey);
     
     CFobLicGenerator() = delete;
-    const UTF8String _privateKey;
+    const std::string _privateKey;
 };
 
 /*
@@ -36,7 +36,7 @@ private:
  is valid before returning an instance to CFobLicGenerator.
  */
 template <typename T = std::shared_ptr<CFobLicGenerator> >
-T CreateCFobLicGenerator(const UTF8String privateKey )
+T CreateCFobLicGenerator(const std::string privateKey )
 {
     if (privateKey.length() == 0)
         return T{};
