@@ -13,7 +13,7 @@ namespace CFob
     namespace Internal
     {
         
-auto StripFormattingFromBase32EncodedString(UTF8String formattedString) -> UTF8String
+auto StripFormattingFromBase32EncodedString(std::string formattedString) -> std::string
 {
     // Replace 9s with Is and 8s with Os
     std::replace( formattedString.begin(), formattedString.end(), '9', 'I');
@@ -36,7 +36,7 @@ auto StripFormattingFromBase32EncodedString(UTF8String formattedString) -> UTF8S
     return formattedString;
 }
 
-auto FormatBase32EncodedString(UTF8String stringToFormat) -> UTF8String
+auto FormatBase32EncodedString(std::string stringToFormat) -> std::string
 {
     // Replace 9s with Is and 8s with Os
     std::replace( stringToFormat.begin(), stringToFormat.end(), 'I', '9');
@@ -49,7 +49,7 @@ auto FormatBase32EncodedString(UTF8String stringToFormat) -> UTF8String
                          stringToFormat.end());
     
     auto index      = 5;
-    const auto dash = UTF8String{"-"};
+    const auto dash = std::string{"-"};
     while(index < stringToFormat.length())
     {
         stringToFormat.insert(index, dash);
