@@ -14,18 +14,18 @@
 class CFobLicVerifier
 {
 public:
-    auto VerifyRegCodeForName(const UTF8String regCode, const UTF8String forName) -> std::tuple<bool, ErrorMessage>;
+    auto VerifyRegCodeForName(const std::string regCode, const std::string forName) -> std::tuple<bool, ErrorMessage>;
     
 private:
     template <typename T>
-    friend T CreateCFobLicVerifier(const UTF8String publicKey );
+    friend T CreateCFobLicVerifier(const std::string publicKey );
     
-    CFobLicVerifier(DSA* pubKey, const UTF8String dsaPubKeyAsString);
+    CFobLicVerifier(DSA* pubKey, const std::string dsaPubKeyAsString);
     
     CFobLicVerifier() = delete;
     
     std::unique_ptr<DSA, decltype(&::DSA_free)> _dsaPubKey;
-    const UTF8String _dsaPubKeyAsString;
+    const std::string _dsaPubKeyAsString;
 };
 
 
@@ -34,7 +34,7 @@ private:
  is valid before returning an instance to CFobLicGenerator.
  */
 template <typename T = std::shared_ptr<CFobLicVerifier> >
-T CreateCFobLicVerifier(const UTF8String publicKey )
+T CreateCFobLicVerifier(const std::string publicKey )
 {
     if (publicKey.length() == 0)
         return T{};

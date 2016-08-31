@@ -14,11 +14,11 @@
 
 namespace CFob
 {
-    auto IsPublicKeyComplete(const UTF8String publicKey) -> bool;
+    auto IsPublicKeyComplete(const std::string publicKey) -> bool;
     
-    auto CompletePublicKeyPEM(const UTF8String partialPEM) -> UTF8String;
+    auto CompletePublicKeyPEM(const std::string partialPEM) -> std::string;
     
-    auto CreateDSAPubKeyFromPublicKeyPEM(const UTF8String publicKey) -> std::tuple<bool, ErrorMessage, DSA*>;
+    auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKey) -> std::tuple<bool, ErrorMessage, DSA*>;
 }
 
 

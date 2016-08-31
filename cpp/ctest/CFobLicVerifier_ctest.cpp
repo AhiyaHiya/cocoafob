@@ -32,7 +32,7 @@ SCENARIO( "License generators should be created when a public key is passed in",
         
         THEN( "The result should be a valid ptr" )
         {
-            REQUIRE(licenseVer);
+            CHECK(licenseVer != nullptr);
         }
     }
 }
@@ -72,7 +72,7 @@ SCENARIO( "License verifier should handle good data", "[verifier]" )
         WHEN( "Good data is passed in" )
         {
             const auto regCode = GetRegCode();
-            const auto name    = UTF8String{"Joe Bloggs"};
+            const auto name    = std::string{"Joe Bloggs"};
             
             auto result = licenseVer->VerifyRegCodeForName(regCode, name);
             
@@ -82,7 +82,7 @@ SCENARIO( "License verifier should handle good data", "[verifier]" )
                 CHECK(boolResult);
                 
                 auto errorMessage = std::get<1>(result);
-                CHECK( errorMessage.length() == 0 );
+                CHECK( errorMessage == "" );
             }
         }
     }
@@ -99,7 +99,7 @@ SCENARIO("License verifier should work with complete PEM key", "[verifier] [publ
         WHEN( "Good data is passed in" )
         {
             const auto regCode = GetRegCode();
-            const auto name    = UTF8String{"Joe Bloggs"};
+            const auto name    = std::string{"Joe Bloggs"};
             
             auto result = licenseVer->VerifyRegCodeForName(regCode, name);
             
@@ -109,7 +109,7 @@ SCENARIO("License verifier should work with complete PEM key", "[verifier] [publ
                 CHECK(boolResult);
                 
                 auto errorMessage = std::get<1>(result);
-                CHECK( errorMessage.length() == 0 );
+                CHECK( errorMessage == "" );
             }
         }
 
