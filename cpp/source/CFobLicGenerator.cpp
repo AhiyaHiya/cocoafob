@@ -8,8 +8,9 @@
 
 #include "CFobLicGenerator.hpp"
 
-CFobLicGenerator::CFobLicGenerator(const std::string privateKey)
-: _privateKey(privateKey)
+CFobLicGenerator::CFobLicGenerator(DSA* privKey, const std::string privateKey)
+: _dsaPrivKey{privKey, ::DSA_free}
+, _privateKey(privateKey)
 {
     ;
 }

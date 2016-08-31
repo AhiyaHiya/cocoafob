@@ -26,9 +26,11 @@ private:
     template <typename T>
     friend T CreateCFobLicGenerator(const std::string privateKey );
     
-    CFobLicGenerator(DSA* privKey,const std::string privateKey);
+    CFobLicGenerator(DSA* privKey, const std::string privateKey);
     
     CFobLicGenerator() = delete;
+    
+    std::unique_ptr<DSA, decltype(&::DSA_free)> _dsaPrivKey;
     const std::string _privateKey;
 };
 
