@@ -15,7 +15,6 @@
 
 using ErrorMessage = std::string;
 using RegCode      = std::string;
-using UTF8String   = std::string;
 
 using BIO_MEM_uptr  = std::unique_ptr<BIO, decltype(&::BIO_free)>;
 using DSA_uptr      = std::unique_ptr<DSA, decltype(&::DSA_free)>;
