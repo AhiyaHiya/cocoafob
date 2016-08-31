@@ -17,7 +17,7 @@ SCENARIO("When given a bad private key", "[base] [generator]")
     auto licenseGen = CreateCFobLicGenerator< std::unique_ptr<CFobLicGenerator> >(privateKeyPEM);
     THEN("Factory function should return a nullptr")
     {
-        REQUIRE(licenseGen == nullptr);
+        CHECK(licenseGen == nullptr);
     }
 }
 
@@ -26,7 +26,7 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
     WHEN("Generator has a valid private key")
     {
         const auto privateKeyPEM = GetPrivateKey();
-        auto licenseGen = CreateCFobLicGenerator<std::unique_ptr<CFobLicGenerator>>(privateKeyPEM);
+        auto licenseGen          = CreateCFobLicGenerator<std::unique_ptr<CFobLicGenerator>>(privateKeyPEM);
 
         THEN("Generator should not be a nullptr")
         {
@@ -37,12 +37,12 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
             auto name = "Joe Bloggs";
             //auto nameData = licenseGen->GetNameData(name);
 
-            auto values = licenseGen->GenerateRegCodeForName(name);
-            auto sucess = std::get<0>(values);
+            auto values           = licenseGen->GenerateRegCodeForName(name);
+            auto sucess           = std::get<0>(values);
             auto registrationCode = std::get<1>(values);
 
-            REQUIRE(sucess);
-            REQUIRE(registrationCode.length() > 0);
+            CHECK(sucess);
+            CHECK(registrationCode != "");
         }
     }
 }
