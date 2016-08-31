@@ -10,6 +10,7 @@
 #define CFobLicGenerator_hpp
 
 #include "CFobDataTypes.hpp"
+#include "CFobCrypto.hpp"
 
 /*
  Class follows model created in Swift
@@ -25,7 +26,7 @@ private:
     template <typename T>
     friend T CreateCFobLicGenerator(const std::string privateKey );
     
-    CFobLicGenerator(const std::string privateKey);
+    CFobLicGenerator(DSA* privKey,const std::string privateKey);
     
     CFobLicGenerator() = delete;
     const std::string _privateKey;
@@ -41,7 +42,23 @@ T CreateCFobLicGenerator(const std::string privateKey )
     if (privateKey.length() == 0)
         return T{};
     
-    return T{};
+    auto dsaKeyResult = CFob::CreateDSAPrivateKeyFromPrivateKeyPEM(privateKey);
+    
+    const auto success = std::get<0>(dsaKeyResult);
+    const auto reason  = std::get<1>(dsaKeyResult);
+    (void)reason; // for debugging purposes
+    
+    if (success)
+    {
+        auto privKey = std::get<2>(dsaKeyResult);
+        auto generator = T {new CFobLicGenerator(privKey, privateKey)};
+        
+        return generator;
+    }
+    else
+    {
+        return T{};
+    }
 }
 
 #endif /* CFobLicGenerator_hpp */
