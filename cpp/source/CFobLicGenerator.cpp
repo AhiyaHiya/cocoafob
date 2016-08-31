@@ -17,10 +17,10 @@ CFobLicGenerator::CFobLicGenerator(const std::string privateKey)
 
 auto CFobLicGenerator::SetPrivateKey() -> std::tuple<bool, ErrorMessage>
 {
-    return std::make_tuple(false, "Not implemented");
+    return {false, "Not implemented"};
 }
 
 auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) -> std::tuple<bool, RegCode>
 {
-    return std::make_tuple(false, "Not implemented");
+    return {false, "Not implemented"};
 }
