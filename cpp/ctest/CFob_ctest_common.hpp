@@ -11,9 +11,10 @@
 
 #include "CFobDataTypes.hpp"
 
-auto GetPublicKey() -> UTF8String;
-auto GetPrivateKey() -> UTF8String;
+auto GetPartialPublicKey() -> std::string;
+auto GetPublicKey() -> std::string;
+auto GetPrivateKey() -> std::string;
 
-auto GetRegCode() -> UTF8String;
+auto GetRegCode() -> std::string;
 
 #endif /* CFob_ctest_common_hpp */

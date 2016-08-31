@@ -8,9 +8,9 @@
 
 #include "CFob_ctest_common.hpp"
 
-auto GetPublicKey() -> UTF8String
+auto GetPartialPublicKey() -> std::string
 {
-    auto publicKey = UTF8String{""};
+    auto publicKey = std::string{""};
     
     publicKey += "MIHxMIGoBgcqhkj";
     publicKey += "OOAQBMIGcAkEA8wm04e0QcQRoAVJW";
@@ -32,7 +32,24 @@ auto GetPublicKey() -> UTF8String
     return publicKey;
 }
 
-auto GetPrivateKey() -> UTF8String
+
+auto GetPublicKey() -> std::string
+{
+    const auto publicKey = R"PEM(-----BEGIN DSA PUBLIC KEY-----
+MIHxMIGoBgcqhkjOOAQBMIGcAkEA8wm04e0QcQRoAVJWWnUw/4rQEKbLKjujJu6o
+yEv7Y2oT3itY5pbObgYCHEu9FBizqq7apsWYSF3YXiRjKlg10wIVALfs9eVL10Ph
+oV6zczFpi3C7FzWNAkBaPhALEKlgIltHsumHdTSBqaVoR1/bmlgw/BCC13IAsW40
+nkFNsK1OVwjo2ocn3MwW4Rdq6uLm3DlENRZ5bYrTA0QAAkEA4reDYZKAl1vx+8EI
+MP/+2Z7ekydHfX0sTMDgkxhtRm6qtcywg01X847Y9ySgNepqleD+Ka2Wbucj1pOr
+y8MoDQ==
+-----END DSA PUBLIC KEY-----
+)PEM";
+    
+    return publicKey;
+}
+
+
+auto GetPrivateKey() -> std::string
 {
     const auto privateKeyPEM = R"PEM(-----BEGIN DSA PRIVATE KEY-----
 MIH5AgEAAkEA8wm04e0QcQRoAVJWWnUw/4rQEKbLKjujJu6oyEv7Y2oT3itY5pbO
@@ -47,7 +64,7 @@ keUwLHBtpClnD5E8
     return privateKeyPEM;
 }
 
-auto GetRegCode() -> UTF8String
+auto GetRegCode() -> std::string
 {
-    return UTF8String{"GAWQE-F9AQP-XJCCL-PAFAX-NU5XX-EUG6W-KLT3H-VTEB9-A9KHJ-8DZ5R-DL74G-TU4BN-7ATPY-3N4XB-V4V27-Q"};
+    return std::string{"GAWQE-F9AQP-XJCCL-PAFAX-NU5XX-EUG6W-KLT3H-VTEB9-A9KHJ-8DZ5R-DL74G-TU4BN-7ATPY-3N4XB-V4V27-Q"};
 }
