@@ -18,23 +18,23 @@ extern "C" {
 #include "decoder.h"
 }
 
-CFobLicVerifier::CFobLicVerifier(DSA* pubKey, const UTF8String dsaPubKeyAsString)
+CFobLicVerifier::CFobLicVerifier(DSA* pubKey, const std::string dsaPubKeyAsString)
 : _dsaPubKey{pubKey, ::DSA_free}
 , _dsaPubKeyAsString{dsaPubKeyAsString}
 {
     ;
 }
 
-auto CFobLicVerifier::VerifyRegCodeForName(const UTF8String regCode, const UTF8String forName) -> std::tuple<bool, ErrorMessage>
+auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std::string forName) -> std::tuple<bool, ErrorMessage>
 {
     if(regCode.length()==0)
     {
-        return std::make_tuple(false, UTF8String{"Empty regCode string detected"});
+        return {false, std::string{"Empty regCode string detected"}};
     }
     
     if(forName.length()==0)
     {
-        return std::make_tuple(false, UTF8String{"Empty name string detected"});
+        return {false, std::string{"Empty name string detected"}};
     }
     
     const auto strippedRegCode = CFob::Internal::StripFormattingFromBase32EncodedString(regCode);
@@ -57,7 +57,7 @@ auto CFobLicVerifier::VerifyRegCodeForName(const UTF8String regCode, const UTF8S
                                   _dsaPubKey.get());
     
     const auto result        = check > 0;
-    const auto resultMessage = result ? UTF8String{"Verified"} : UTF8String{"Failed"};
+    const auto resultMessage = result ? std::string{"Verified"} : std::string{"Failed"};
     
     return std::make_tuple(result, resultMessage);
 }
