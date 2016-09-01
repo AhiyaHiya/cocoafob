@@ -23,4 +23,8 @@ namespace cocoafob
         }
     }
     
+    CFobDSAKeyPEM::operator DSA*() const
+    {
+        return _dsaKey;
+    }
 }

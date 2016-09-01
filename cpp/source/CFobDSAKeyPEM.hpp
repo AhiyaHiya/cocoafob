@@ -34,6 +34,8 @@ namespace cocoafob
         
         CFobDSAKeyPEM() = delete;
         
+        operator DSA*() const;
+
         const KeyType     _keyType;
         const std::string _keyText;
         
