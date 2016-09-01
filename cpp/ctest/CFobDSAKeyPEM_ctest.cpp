@@ -11,11 +11,11 @@
 #include "CFobDSAKeyPEM.hpp"
 #include "CFob_ctest_common.hpp"
 
-TEST_CASE("Bad key test", "")
+TEST_CASE("Bad key test", "[struct]")
 {
     try
     {
-        auto key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, std::string{""}};
+        auto&& key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, std::string{""}};
     }
     catch (...)
     {
@@ -23,12 +23,12 @@ TEST_CASE("Bad key test", "")
     }
 }
 
-TEST_CASE("Good key test", "")
+TEST_CASE("Good key test", "[struct]")
 {
     try
     {
         auto pubKey = GetPartialPublicKey();
-        auto key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+        auto&& key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
     }
     catch (...)
     {
