@@ -15,10 +15,11 @@ namespace cocoafob
                                  const std::string keyText)
     : _keyType{keyType}
     , _keyText{keyText}
+    , _dsaKey{nullptr}
     {
         if (_keyText.length()==0)
         {
-         //   throw std::exception();
+            throw std::exception();
         }
     }
     

@@ -9,7 +9,7 @@
 #ifndef CFobDSAKeyPEM_hpp
 #define CFobDSAKeyPEM_hpp
 
-#include <string>
+#include "CFobDataTypes.hpp"
 
 namespace cocoafob
 {
@@ -29,10 +29,15 @@ namespace cocoafob
     public:
         CFobDSAKeyPEM(const KeyType keyType, const std::string keyText);
         
+        CFobDSAKeyPEM(CFobDSAKeyPEM const&) = delete;
+        CFobDSAKeyPEM& operator=(CFobDSAKeyPEM const&) = delete;
+        
         CFobDSAKeyPEM() = delete;
         
-        const KeyType _keyType;
+        const KeyType     _keyType;
         const std::string _keyText;
+        
+        DSA* _dsaKey;
     };
 }
 
