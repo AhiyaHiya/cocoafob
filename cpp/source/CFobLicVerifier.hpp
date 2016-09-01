@@ -11,24 +11,31 @@
 
 #include "CFobCrypto.hpp"
 
+namespace cocoafob
+{
 class CFobLicVerifier
 {
 public:
-    auto VerifyRegCodeForName(const std::string regCode, const std::string forName) -> std::tuple<bool, ErrorMessage>;
-    
-private:
-    template <typename T>
-    friend T CreateCFobLicVerifier(const std::string publicKey );
+    /**
+     Precondition(s):
+     \param publicKey must be valid; exception thrown if empty or invalid
+     */
+    CFobLicVerifier(const std::string publicKey);
     
     CFobLicVerifier(DSA* pubKey, const std::string dsaPubKeyAsString);
     
+    auto VerifyRegCodeForName(const std::string regCode, const std::string forName) -> std::tuple<bool, ErrorMessage>;
+    
+private:
     CFobLicVerifier() = delete;
     
-    std::unique_ptr<DSA, decltype(&::DSA_free)> _dsaPubKey;
-    const std::string _dsaPubKeyAsString;
+//    std::unique_ptr<DSA, decltype(&::DSA_free)> _dsaPubKey;
+    
+    /// DSA, PEM
+    const std::string _publicKey;
 };
 
-
+#if (0)
 /*
  Factory function, which will check if the private key
  is valid before returning an instance to CFobLicGenerator.
@@ -57,6 +64,7 @@ T CreateCFobLicVerifier(const std::string publicKey )
         return T{};
     }
 }
-
+#endif
+}
 
 #endif /* CFobLicVerifier_hpp */

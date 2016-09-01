@@ -8,12 +8,20 @@
 
 #include "CFobLicGenerator.hpp"
 
-CFobLicGenerator::CFobLicGenerator(DSA* privKey, const std::string privateKey)
-: _dsaPrivKey{privKey, ::DSA_free}
-, _privateKey(privateKey)
+namespace cocoafob
 {
-    ;
-}
+    
+    CFobLicGenerator::CFobLicGenerator(const std::string privateKey)
+    {
+        
+    }
+    
+//CFobLicGenerator::CFobLicGenerator(DSA* privKey, const std::string privateKey)
+//: _dsaPrivKey{privKey, ::DSA_free}
+//, _privateKey(privateKey)
+//{
+//    ;
+//}
 
 
 auto CFobLicGenerator::SetPrivateKey() -> std::tuple<bool, ErrorMessage>
@@ -24,4 +32,5 @@ auto CFobLicGenerator::SetPrivateKey() -> std::tuple<bool, ErrorMessage>
 auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) -> std::tuple<bool, RegCode>
 {
     return {false, "Not implemented"};
+}
 }

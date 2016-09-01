@@ -18,9 +18,21 @@ extern "C" {
 #include "decoder.h"
 }
 
+namespace cocoafob
+{
+CFobLicVerifier::CFobLicVerifier(const std::string publicKey)
+: _publicKey{publicKey}
+{
+    if (_publicKey.length() == 0)
+    {
+     //   throw std::exception();
+    }
+}
+
 CFobLicVerifier::CFobLicVerifier(DSA* pubKey, const std::string dsaPubKeyAsString)
-: _dsaPubKey{pubKey, ::DSA_free}
-, _dsaPubKeyAsString{dsaPubKeyAsString}
+: //_dsaPubKey{pubKey, ::DSA_free}
+//,
+    _publicKey{dsaPubKeyAsString}
 {
     ;
 }
@@ -48,16 +60,18 @@ auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std:
     
     auto digest = std::vector<uint8_t>(0, SHA_DIGEST_LENGTH);
     SHA1((unsigned char *)forName.data(), forName.length(), digest.data());
-    
+#if (0)
     const auto check = DSA_verify(0,
                                   digest.data(),
                                   static_cast<int32_t>(digest.size()),
                                   sig.data(),
                                   (int)sigSize,
-                                  _dsaPubKey.get());
-    
-    const auto result        = check > 0;
+                                  _pub.get());
+    auto result        = check > 0 ? true : false;
+#endif
+    auto result = false;
     const auto resultMessage = result ? std::string{"Verified"} : std::string{"Failed"};
     
-    return std::make_tuple(result, resultMessage);
+    return {result, resultMessage};//std::make_tuple(result, resultMessage);
+}
 }
