@@ -11,15 +11,19 @@
 #include "CFobDSAKeyPEM.hpp"
 #include "CFob_ctest_common.hpp"
 
-TEST_CASE("Bad key test", "[struct]")
+SCENARIO("When a bad key is passed in", "[struct]")
 {
-    try
+    THEN("The class should throw and never exist")
     {
-        auto&& key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, std::string{""}};
-    }
-    catch (...)
-    {
-        CHECK(true);
+        try
+        {
+            auto&& key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, std::string{""}};
+            CHECK(false);
+        }
+        catch (...)
+        {
+            CHECK(true);
+        }
     }
 }
 
