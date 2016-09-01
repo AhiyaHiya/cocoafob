@@ -12,28 +12,34 @@
 #include "CFobDataTypes.hpp"
 #include "CFobCrypto.hpp"
 
+namespace cocoafob
+{
 /*
  Class follows model created in Swift
  */
 class CFobLicGenerator
 {
 public:
+    CFobLicGenerator(const std::string privateKey);
+//    CFobLicGenerator(DSA* privKey, const std::string privateKey);
+    
     auto SetPrivateKey() -> std::tuple<bool, ErrorMessage>;
     
     auto GenerateRegCodeForName(const std::string name) -> std::tuple<bool, RegCode>;
     
 private:
-    template <typename T>
-    friend T CreateCFobLicGenerator(const std::string privateKey );
+//    template <typename T>
+//    friend T CreateCFobLicGenerator(const std::string privateKey );
     
-    CFobLicGenerator(DSA* privKey, const std::string privateKey);
+    
     
     CFobLicGenerator() = delete;
     
-    std::unique_ptr<DSA, decltype(&::DSA_free)> _dsaPrivKey;
+    //std::unique_ptr<DSA, decltype(&::DSA_free)> _dsaPrivKey;
     const std::string _privateKey;
 };
 
+#if (0)
 /*
  Factory function, which will check if the private key
  is valid before returning an instance to CFobLicGenerator.
@@ -61,6 +67,10 @@ T CreateCFobLicGenerator(const std::string privateKey )
     {
         return T{};
     }
+}
+
+#endif
+
 }
 
 #endif /* CFobLicGenerator_hpp */
