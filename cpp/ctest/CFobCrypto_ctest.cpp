@@ -10,7 +10,7 @@
 #include "CFobCrypto.hpp"
 
 
-SCENARIO("CreateDSAPubKeyFromPublicKeyPEM", "[]")
+SCENARIO("CreateDSAPubKeyFromPublicKeyPEM", "[utility]")
 {
     GIVEN("An empty public string")
     {
@@ -24,7 +24,7 @@ SCENARIO("CreateDSAPubKeyFromPublicKeyPEM", "[]")
     }
 }
 
-SCENARIO("Public key exercise", "")
+SCENARIO("Public key exercise", "[utility]")
 {
     WHEN("An empty string is passed")
     {
