@@ -15,7 +15,7 @@ SCENARIO("CreateDSAPubKeyFromPublicKeyPEM", "[utility]")
     GIVEN("An empty public string")
     {
         auto tupleResult =
-        CFob::CreateDSAPubKeyFromPublicKeyPEM("");
+        cocoafob::CreateDSAPubKeyFromPublicKeyPEM("");
         THEN("The result should be false")
         {
             auto result = std::get<0>(tupleResult);
@@ -28,7 +28,7 @@ SCENARIO("Public key exercise", "[utility]")
 {
     WHEN("An empty string is passed")
     {
-        auto result = CFob::IsPublicKeyComplete("");
+        auto result = cocoafob::IsPublicKeyComplete("");
         THEN("result should be false")
         {
             CHECK_FALSE(result);
@@ -36,7 +36,7 @@ SCENARIO("Public key exercise", "[utility]")
     }
     AND_WHEN("A garbage string is passed")
     {
-        auto result = CFob::IsPublicKeyComplete("Holy cow");
+        auto result = cocoafob::IsPublicKeyComplete("Holy cow");
         THEN("result should be false")
         {
             CHECK_FALSE(result);
