@@ -12,7 +12,7 @@
 #import <openssl/err.h>
 #import <openssl/pem.h>
 
-namespace CFob
+namespace cocoafob
 {
     
 
@@ -74,6 +74,25 @@ auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::
     }
 }
 
+    auto IsKeyComplete(const KeyType keyType, const std::string keyText) -> bool
+    {
+        const auto keyTypeString = keyType==KeyType::Private ?
+        std::string{"PRIVATE"} : std::string{"PUBLIC"};
+        
+        const auto beginKey = std::string{"-----BEGIN DSA "} +
+        keyTypeString +
+        std::string{" KEY-----"};
+        
+        const auto endKey = std::string{"-----END DSA "} +
+        keyTypeString +
+        std::string{" KEY-----"};
+        
+        const auto foundBeginning = keyText.find(beginKey) != std::string::npos;
+        const auto foundEnd = keyText.find(endKey) != std::string::npos;
+        
+        return foundBeginning && foundEnd;
+    }
+    
 auto IsPublicKeyComplete(const std::string publicKey) -> bool
 {
     const auto found = publicKey.find(std::string{"-----BEGIN DSA PUBLIC KEY-----"})
@@ -81,7 +100,38 @@ auto IsPublicKeyComplete(const std::string publicKey) -> bool
     return found;
 }
 
-
+auto CompleteKeyPEM(const KeyType keyType, const std::string partialPEM) -> std::string
+{
+    using namespace std::string_literals;
+    
+    const auto dashes = "-----"s;
+    const auto begin  = "BEGIN"s;
+    const auto end    = "END"s;
+    const auto key    = "KEY"s;
+    const auto pub    = "DSA "s + (keyType==KeyType::Private ? "PRIVATE"s : "PUBLIC"s);
+    
+    auto pem = dashes;
+    
+    pem += begin;
+    pem += " "s;
+    pem += pub;
+    pem += " "s;
+    pem += key;
+    pem += dashes;
+    pem += "\n"s;
+    pem += partialPEM;
+    pem += dashes;
+    pem += end;
+    pem += " "s;
+    pem += pub;
+    pem += " "s;
+    pem += key;
+    pem += dashes;
+    pem += "\n"s;
+    
+    return pem;
+}
+    
 auto CompletePublicKeyPEM(const std::string partialPEM) -> std::string
 {
     using namespace std::string_literals;

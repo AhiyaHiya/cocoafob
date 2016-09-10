@@ -12,9 +12,13 @@
 #include <tuple>
 #include "CFobDataTypes.hpp"
 
-namespace CFob
+namespace cocoafob
 {
+    auto IsKeyComplete(const KeyType keyType, const std::string keyText) -> bool;
+    
     auto IsPublicKeyComplete(const std::string publicKey) -> bool;
+    
+    auto CompleteKeyPEM(const KeyType keyType, const std::string partialPEM) -> std::string;
     
     auto CompletePublicKeyPEM(const std::string partialPEM) -> std::string;
     
