@@ -22,5 +22,13 @@ using DSA_uptr      = std::unique_ptr<DSA, decltype(&::DSA_free)>;
 using BIO_MEM_sptr  = std::shared_ptr<BIO>;
 using DSA_sptr      = std::shared_ptr<DSA>;
 
+namespace cocoafob
+{
+    enum KeyType
+    {
+        Public = 0,
+        Private
+    };
+}
 
 #endif /* CFobDataTypes_h */

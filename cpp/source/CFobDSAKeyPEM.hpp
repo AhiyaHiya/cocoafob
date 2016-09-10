@@ -13,12 +13,6 @@
 
 namespace cocoafob
 {
-    enum KeyType
-    {
-        Public = 0,
-        Private
-    };
-    
     /**
      \brief Movable only struct for DSA key
      \remarks Throws on bad private/public keys passed in
