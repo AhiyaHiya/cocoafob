@@ -9,8 +9,8 @@
 #ifndef CFobLicGenerator_hpp
 #define CFobLicGenerator_hpp
 
-#include "CFobDataTypes.hpp"
 #include "CFobCrypto.hpp"
+#include "CFobDataTypes.hpp"
 
 namespace cocoafob
 {
@@ -19,18 +19,16 @@ namespace cocoafob
  */
 class CFobLicGenerator
 {
-public:
+  public:
     CFobLicGenerator(const std::string privateKey);
     auto SetPrivateKey() -> std::tuple<bool, ErrorMessage>;
     auto GenerateRegCodeForName(const std::string name) -> std::tuple<bool, RegCode>;
-    
-private:
+
+  private:
     CFobLicGenerator() = delete;
-    
+
     const std::string _privateKey;
 };
-
-
 }
 
 #endif /* CFobLicGenerator_hpp */
