@@ -12,6 +12,8 @@
 #import <openssl/err.h>
 #import <openssl/pem.h>
 
+using namespace std::string_literals;
+
 namespace cocoafob
 {
     
@@ -20,7 +22,7 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
 {
     if (publicKeyPEM.length()==0)
     {
-        return {false, std::string{"Empty PEM string detected"}, nullptr};
+        return {false, "Empty PEM string detected"s, nullptr};
     }
     
     const auto completeKey = IsPublicKeyComplete(publicKeyPEM) ?
@@ -35,7 +37,7 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
 
     if (result != nullptr)
     {
-        return {true, std::string{"Success"}, dsa};
+        return {true, "Success"s, dsa};
     }
     else
     {
@@ -102,8 +104,6 @@ auto IsPublicKeyComplete(const std::string publicKey) -> bool
 
 auto CompleteKeyPEM(const KeyType keyType, const std::string partialPEM) -> std::string
 {
-    using namespace std::string_literals;
-    
     const auto dashes = "-----"s;
     const auto begin  = "BEGIN"s;
     const auto end    = "END"s;
