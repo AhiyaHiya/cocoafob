@@ -8,31 +8,28 @@
 
 #include "CFobCrypto.hpp"
 
-#import <openssl/evp.h>
 #import <openssl/err.h>
+#import <openssl/evp.h>
 #import <openssl/pem.h>
 
 using namespace std::string_literals;
 
 namespace cocoafob
 {
-    
 
-auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tuple<bool, ErrorMessage, DSA*>
+auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tuple<bool, ErrorMessage, DSA *>
 {
-    if (publicKeyPEM.length()==0)
+    if (publicKeyPEM.length() == 0)
     {
         return {false, "Empty PEM string detected"s, nullptr};
     }
-    
-    const auto completeKey = IsPublicKeyComplete(publicKeyPEM) ?
-                                publicKeyPEM :
-                                CompletePublicKeyPEM(publicKeyPEM);
+
+    const auto completeKey = IsPublicKeyComplete(publicKeyPEM) ? publicKeyPEM : CompletePublicKeyPEM(publicKeyPEM);
 
     ERR_load_crypto_strings();
-    
-    auto bio    = BIO_MEM_uptr{BIO_new_mem_buf((void *)completeKey.c_str(), -1), ::BIO_free};
-    auto dsa    = DSA_new();
+
+    auto bio = BIO_MEM_uptr{BIO_new_mem_buf((void *)completeKey.c_str(), -1), ::BIO_free};
+    auto dsa = DSA_new();
     auto result = PEM_read_bio_DSA_PUBKEY(bio.get(), &dsa, NULL, NULL);
 
     if (result != nullptr)
@@ -48,23 +45,23 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
         return {false, message, nullptr};
     }
 }
-    
-auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::tuple<bool, ErrorMessage, DSA*>
+
+auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::tuple<bool, ErrorMessage, DSA *>
 {
-    if (privateKey.length()==0)
+    if (privateKey.length() == 0)
     {
-        return {false, std::string{"Empty PEM string detected"}, nullptr};
+        return {false, "Empty PEM string detected"s, nullptr};
     }
-    
+
     ERR_load_crypto_strings();
-    
-    auto dsa    = DSA_new();
-    auto bio    = BIO_MEM_uptr{BIO_new_mem_buf((void *)privateKey.c_str(), -1), ::BIO_free};
+
+    auto dsa = DSA_new();
+    auto bio = BIO_MEM_uptr{BIO_new_mem_buf((void *)privateKey.c_str(), -1), ::BIO_free};
     auto result = PEM_read_bio_DSAPrivateKey(bio.get(), &dsa, NULL, NULL);
-    
+
     if (result != nullptr)
     {
-        return {true, std::string{"Success"}, dsa};
+        return {true, "Success"s, dsa};
     }
     else
     {
@@ -76,42 +73,40 @@ auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::
     }
 }
 
-    auto IsKeyComplete(const KeyType keyType, const std::string keyText) -> bool
-    {
-        const auto keyTypeString = keyType==KeyType::Private ?
-        std::string{"PRIVATE"} : std::string{"PUBLIC"};
-        
-        const auto beginKey = std::string{"-----BEGIN DSA "} +
-        keyTypeString +
-        std::string{" KEY-----"};
-        
-        const auto endKey = std::string{"-----END DSA "} +
-        keyTypeString +
-        std::string{" KEY-----"};
-        
-        const auto foundBeginning = keyText.find(beginKey) != std::string::npos;
-        const auto foundEnd = keyText.find(endKey) != std::string::npos;
-        
-        return foundBeginning && foundEnd;
-    }
-    
+auto IsKeyComplete(const KeyType keyType, const std::string keyText) -> bool
+{
+    const auto keyTypeString = keyType == KeyType::Private ? "PRIVATE"s : "PUBLIC"s;
+
+    const auto beginKey = "-----BEGIN DSA "s +
+                          keyTypeString +
+                          " KEY-----"s;
+
+    const auto endKey = "-----END DSA "s +
+                        keyTypeString +
+                        " KEY-----"s;
+
+    const auto foundBeginning = keyText.find(beginKey) != std::string::npos;
+    const auto foundEnd = keyText.find(endKey) != std::string::npos;
+
+    return foundBeginning && foundEnd;
+}
+
 auto IsPublicKeyComplete(const std::string publicKey) -> bool
 {
-    const auto found = publicKey.find(std::string{"-----BEGIN DSA PUBLIC KEY-----"})
-                        != std::string::npos;
+    const auto found = publicKey.find("-----BEGIN DSA PUBLIC KEY-----"s) != std::string::npos;
     return found;
 }
 
 auto CompleteKeyPEM(const KeyType keyType, const std::string partialPEM) -> std::string
 {
     const auto dashes = "-----"s;
-    const auto begin  = "BEGIN"s;
-    const auto end    = "END"s;
-    const auto key    = "KEY"s;
-    const auto pub    = "DSA "s + (keyType==KeyType::Private ? "PRIVATE"s : "PUBLIC"s);
-    
+    const auto begin = "BEGIN"s;
+    const auto end = "END"s;
+    const auto key = "KEY"s;
+    const auto pub = "DSA "s + (keyType == KeyType::Private ? "PRIVATE"s : "PUBLIC"s);
+
     auto pem = dashes;
-    
+
     pem += begin;
     pem += " "s;
     pem += pub;
@@ -128,22 +123,20 @@ auto CompleteKeyPEM(const KeyType keyType, const std::string partialPEM) -> std:
     pem += key;
     pem += dashes;
     pem += "\n"s;
-    
+
     return pem;
 }
-    
+
 auto CompletePublicKeyPEM(const std::string partialPEM) -> std::string
 {
-    using namespace std::string_literals;
-    
     const auto dashes = "-----"s;
-    const auto begin  = "BEGIN"s;
-    const auto end    = "END"s;
-    const auto key    = "KEY"s;
-    const auto pub    = "DSA PUBLIC"s;
-    
+    const auto begin = "BEGIN"s;
+    const auto end = "END"s;
+    const auto key = "KEY"s;
+    const auto pub = "DSA PUBLIC"s;
+
     auto pem = dashes;
-    
+
     pem += begin;
     pem += " "s;
     pem += pub;
@@ -160,7 +153,7 @@ auto CompletePublicKeyPEM(const std::string partialPEM) -> std::string
     pem += key;
     pem += dashes;
     pem += "\n"s;
-    
+
     return pem;
 }
 

@@ -8,11 +8,11 @@
 
 #include "CFobLicVerifier.hpp"
 #include "CFobInternal.hpp"
-#include <string>
 #include <iostream>
-#include <vector>
 #include <openssl/engine.h>
 #include <openssl/pem.h>
+#include <string>
+#include <vector>
 
 extern "C" {
 #include "decoder.h"
@@ -21,43 +21,43 @@ extern "C" {
 namespace cocoafob
 {
 CFobLicVerifier::CFobLicVerifier(const std::string publicKey)
-: _publicKey{publicKey}
+    : _publicKey{publicKey}
 {
     if (_publicKey.length() == 0)
     {
-     //   throw std::exception();
+        //   throw std::exception();
     }
 }
 
-CFobLicVerifier::CFobLicVerifier(DSA* pubKey, const std::string dsaPubKeyAsString)
-: //_dsaPubKey{pubKey, ::DSA_free}
-//,
-    _publicKey{dsaPubKeyAsString}
+CFobLicVerifier::CFobLicVerifier(DSA *pubKey, const std::string dsaPubKeyAsString)
+    : //_dsaPubKey{pubKey, ::DSA_free}
+      //,
+      _publicKey{dsaPubKeyAsString}
 {
     ;
 }
 
 auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std::string forName) -> std::tuple<bool, ErrorMessage>
 {
-    if(regCode.length()==0)
+    if (regCode.length() == 0)
     {
         return {false, std::string{"Empty regCode string detected"}};
     }
-    
-    if(forName.length()==0)
+
+    if (forName.length() == 0)
     {
         return {false, std::string{"Empty name string detected"}};
     }
-    
+
     const auto strippedRegCode = CFob::Internal::StripFormattingFromBase32EncodedString(regCode);
-    const auto decodedSize     = base32_decoder_buffer_size(strippedRegCode.length());
-    
-    auto sig           = std::vector<uint8_t>(decodedSize, 0);
+    const auto decodedSize = base32_decoder_buffer_size(strippedRegCode.length());
+
+    auto sig = std::vector<uint8_t>(decodedSize, 0);
     const auto sigSize = base32_decode(sig.data(),
                                        decodedSize,
                                        (unsigned char *)strippedRegCode.c_str(),
                                        strippedRegCode.length());
-    
+
     auto digest = std::vector<uint8_t>(0, SHA_DIGEST_LENGTH);
     SHA1((unsigned char *)forName.data(), forName.length(), digest.data());
 #if (0)
@@ -67,11 +67,11 @@ auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std:
                                   sig.data(),
                                   (int)sigSize,
                                   _pub.get());
-    auto result        = check > 0 ? true : false;
+    auto result = check > 0 ? true : false;
 #endif
     auto result = false;
     const auto resultMessage = result ? std::string{"Verified"} : std::string{"Failed"};
-    
-    return {result, resultMessage};//std::make_tuple(result, resultMessage);
+
+    return {result, resultMessage}; //std::make_tuple(result, resultMessage);
 }
 }

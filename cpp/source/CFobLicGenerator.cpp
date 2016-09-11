@@ -10,19 +10,10 @@
 
 namespace cocoafob
 {
-    
-    CFobLicGenerator::CFobLicGenerator(const std::string privateKey)
-    {
-        
-    }
-    
-//CFobLicGenerator::CFobLicGenerator(DSA* privKey, const std::string privateKey)
-//: _dsaPrivKey{privKey, ::DSA_free}
-//, _privateKey(privateKey)
-//{
-//    ;
-//}
 
+CFobLicGenerator::CFobLicGenerator(const std::string privateKey)
+{
+}
 
 auto CFobLicGenerator::SetPrivateKey() -> std::tuple<bool, ErrorMessage>
 {
