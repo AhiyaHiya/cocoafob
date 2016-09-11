@@ -32,6 +32,7 @@ namespace cocoafob
     {
     public:
         CFobDSAKeyPEM(const KeyType keyType, const std::string keyText);
+        CFobDSAKeyPEM(CFobDSAKeyPEM&& other);
         
         CFobDSAKeyPEM(CFobDSAKeyPEM const&) = delete;
         CFobDSAKeyPEM& operator=(CFobDSAKeyPEM const&) = delete;
