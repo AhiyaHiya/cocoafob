@@ -73,9 +73,12 @@ auto CFobDSAKeyPEM::SetUpDSAPtr() -> DSA *
 
     if (result == nullptr)
     {
-        DSA_free(dsa);
+        ERR_load_crypto_strings();
+        
         const auto message = (_keyType == KeyType::Private ? "Private"s : "Public"s) +
-                             " key dsa failure"s;
+                            " key dsa failure: "s +
+                            ERR_error_string(ERR_get_error(), nullptr);
+        DSA_free(dsa);
         throw std::runtime_error(message);
     }
     else
