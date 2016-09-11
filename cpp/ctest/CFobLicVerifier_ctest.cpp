@@ -127,3 +127,11 @@ SCENARIO("License verifier should work with complete PEM key", "[verifier] [publ
 
 
 #endif
+
+TEST_CASE("Exercise verifier", "[verifier]")
+{
+    auto pubKey = GetPartialPublicKey();
+    auto key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+    
+    auto licenseVer = cocoafob::CFobLicVerifier(std::forward<cocoafob::CFobDSAKeyPEM>(key));
+}
