@@ -13,11 +13,11 @@
 
 namespace CFob
 {
-    namespace Internal
-    {
-        auto StripFormattingFromBase32EncodedString(std::string formattedString) -> std::string;
-        auto FormatBase32EncodedString(std::string stringToFormat) -> std::string;
-    }
+namespace Internal
+{
+auto StripFormattingFromBase32EncodedString(std::string formattedString) -> std::string;
+auto FormatBase32EncodedString(std::string stringToFormat) -> std::string;
+}
 }
 
 #endif /* CFobInternal_hpp */
