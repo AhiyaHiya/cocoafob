@@ -11,6 +11,9 @@
 
 #include "CFobDataTypes.hpp"
 
+/*
+ Functions for getting data used in testing.
+ */
 auto GetPartialPublicKey() -> std::string;
 auto GetPublicKey() -> std::string;
 auto GetPrivateKey() -> std::string;
