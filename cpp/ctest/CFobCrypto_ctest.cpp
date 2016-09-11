@@ -9,7 +9,7 @@
 #include "catch.hpp"
 #include "CFobCrypto.hpp"
 
-
+#if (0)
 SCENARIO("CreateDSAPubKeyFromPublicKeyPEM", "[utility]")
 {
     GIVEN("An empty public string")
@@ -23,6 +23,7 @@ SCENARIO("CreateDSAPubKeyFromPublicKeyPEM", "[utility]")
         }
     }
 }
+#endif
 
 SCENARIO("Public key exercise", "[utility]")
 {
