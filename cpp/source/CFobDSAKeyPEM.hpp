@@ -13,7 +13,7 @@
 
 namespace cocoafob
 {
-    /**
+/**
      \brief Movable only struct for DSA key
      
      Precondition(s):
@@ -23,33 +23,32 @@ namespace cocoafob
      Postcondition(s):
      - C++11 struct with valid DSA pointer 
      - Throws on bad private/public keys passed in
-     
-     Invariant(s):
-     
-     
      */
-    struct CFobDSAKeyPEM
-    {
-    public:
-        CFobDSAKeyPEM(const KeyType keyType, const std::string keyText);
-        CFobDSAKeyPEM(CFobDSAKeyPEM&& other);
-        
-        CFobDSAKeyPEM(CFobDSAKeyPEM const&) = delete;
-        CFobDSAKeyPEM& operator=(CFobDSAKeyPEM const&) = delete;
-        
-        CFobDSAKeyPEM() = delete;
-        
-        operator DSA*() const;
+struct CFobDSAKeyPEM
+{
+  public:
+    CFobDSAKeyPEM(const KeyType keyType, const std::string keyText);
 
-        const KeyType     _keyType;
-        const std::string _keyText;
-        
-        DSA* _dsaKey;
-        
-    private:
-        auto CheckKey(const std::string keyText) -> std::string;
-        auto SetUpDSAPtr() -> DSA*;
-    };
+    // movable
+    CFobDSAKeyPEM(CFobDSAKeyPEM &&other);
+
+    // not-copyable
+    CFobDSAKeyPEM(CFobDSAKeyPEM const &) = delete;
+    CFobDSAKeyPEM &operator=(CFobDSAKeyPEM const &) = delete;
+
+    CFobDSAKeyPEM() = delete;
+
+    operator DSA *() const;
+
+    const KeyType _keyType;
+    const std::string _keyText;
+
+    DSA *_dsaKey;
+
+  private:
+    auto CheckKey(const std::string keyText) -> std::string;
+    auto SetUpDSAPtr() -> DSA *;
+};
 }
 
 #endif /* CFobDSAKeyPEM_hpp */
