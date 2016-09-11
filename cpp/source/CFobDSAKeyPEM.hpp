@@ -15,7 +15,17 @@ namespace cocoafob
 {
     /**
      \brief Movable only struct for DSA key
-     \remarks Throws on bad private/public keys passed in
+     
+     Precondition(s):
+     - non-empty DSA PEM string; complete or partial
+     strings are valid as input 
+     
+     Postcondition(s):
+     - C++11 struct with valid DSA pointer 
+     - Throws on bad private/public keys passed in
+     
+     Invariant(s):
+     
      
      */
     struct CFobDSAKeyPEM
@@ -34,6 +44,10 @@ namespace cocoafob
         const std::string _keyText;
         
         DSA* _dsaKey;
+        
+    private:
+        auto CheckKey(const std::string keyText) -> std::string;
+        auto SetUpDSAPtr() -> DSA*;
     };
 }
 
