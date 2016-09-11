@@ -20,19 +20,8 @@ extern "C" {
 
 namespace cocoafob
 {
-CFobLicVerifier::CFobLicVerifier(const std::string publicKey)
-    : _publicKey{publicKey}
-{
-    if (_publicKey.length() == 0)
-    {
-        //   throw std::exception();
-    }
-}
-
-CFobLicVerifier::CFobLicVerifier(DSA *pubKey, const std::string dsaPubKeyAsString)
-    : //_dsaPubKey{pubKey, ::DSA_free}
-      //,
-      _publicKey{dsaPubKeyAsString}
+CFobLicVerifier::CFobLicVerifier(CFobDSAKeyPEM&& dsaKey)
+    : _dsaKey{std::move(dsaKey)}
 {
     ;
 }
