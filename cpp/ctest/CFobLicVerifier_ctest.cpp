@@ -10,6 +10,7 @@
 #include "CFob_ctest_common.hpp"
 #include "CFobLicVerifier.hpp"
 
+#if (0)
 SCENARIO( "License generators should only be created if a public key is passed in", "[verifier] [publicKey]" )
 {
     GIVEN("No public key")
@@ -43,7 +44,7 @@ SCENARIO( "License generators should be created when a public key is passed in",
         }
     }
 }
-
+#endif
 #if (0)
 SCENARIO( "License verifier should handle bad data gracefully", "[verifier]" )
 {
