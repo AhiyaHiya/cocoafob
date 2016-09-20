@@ -33,10 +33,11 @@ TEST_CASE("Good key test", "[struct]")
     {
         auto pubKey = GetPartialPublicKey();
         auto&& key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+        CHECK(true);
     }
     catch (...)
     {
-        CHECK(true);
+        CHECK(false);
     }
 }
 
