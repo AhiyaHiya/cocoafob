@@ -103,8 +103,8 @@ auto CompleteKeyPEM(const KeyType keyType, const std::string partialPEM) -> std:
     const auto begin = "BEGIN"s;
     const auto end = "END"s;
     const auto key = "KEY"s;
-    const auto pub = "DSA "s + (keyType == KeyType::Private ? "PRIVATE"s : "PUBLIC"s);
-
+    const auto pub = (keyType == KeyType::Private ? "PRIVATE"s : "PUBLIC"s);
+    
     auto pem = dashes;
 
     pem += begin;
