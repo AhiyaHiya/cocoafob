@@ -11,7 +11,7 @@
 auto GetPartialPublicKey() -> std::string
 {
     auto publicKey = std::string{""};
-    
+
     publicKey += "MIHxMIGoBgcqhkj";
     publicKey += "OOAQBMIGcAkEA8wm04e0QcQRoAVJW";
     publicKey += "WnUw/4rQEKbLKjujJu6o\n";
@@ -28,39 +28,37 @@ auto GetPartialPublicKey() -> std::string
     publicKey += "MP/+";
     publicKey += "2Z7ekydHfX0sTMDgkxhtRm6qtcywg01X847Y9ySgNepqleD+Ka2Wbucj1pOr\n";
     publicKey += "y8MoDQ==\n";
-    
+
     return publicKey;
 }
 
-
 auto GetPublicKey() -> std::string
 {
-    const auto publicKey = R"PEM(-----BEGIN DSA PUBLIC KEY-----
+    const auto publicKey = R"PEM(-----BEGIN PUBLIC KEY-----
 MIHxMIGoBgcqhkjOOAQBMIGcAkEA8wm04e0QcQRoAVJWWnUw/4rQEKbLKjujJu6o
 yEv7Y2oT3itY5pbObgYCHEu9FBizqq7apsWYSF3YXiRjKlg10wIVALfs9eVL10Ph
 oV6zczFpi3C7FzWNAkBaPhALEKlgIltHsumHdTSBqaVoR1/bmlgw/BCC13IAsW40
 nkFNsK1OVwjo2ocn3MwW4Rdq6uLm3DlENRZ5bYrTA0QAAkEA4reDYZKAl1vx+8EI
 MP/+2Z7ekydHfX0sTMDgkxhtRm6qtcywg01X847Y9ySgNepqleD+Ka2Wbucj1pOr
 y8MoDQ==
------END DSA PUBLIC KEY-----
+-----END PUBLIC KEY-----
 )PEM";
-    
+
     return publicKey;
 }
 
-
 auto GetPrivateKey() -> std::string
 {
-    const auto privateKeyPEM = R"PEM(-----BEGIN DSA PRIVATE KEY-----
+    const auto privateKeyPEM = R"PEM(-----BEGIN PRIVATE KEY-----
 MIH5AgEAAkEA8wm04e0QcQRoAVJWWnUw/4rQEKbLKjujJu6oyEv7Y2oT3itY5pbO
 bgYCHEu9FBizqq7apsWYSF3YXiRjKlg10wIVALfs9eVL10PhoV6zczFpi3C7FzWN
 AkBaPhALEKlgIltHsumHdTSBqaVoR1/bmlgw/BCC13IAsW40nkFNsK1OVwjo2ocn
 3MwW4Rdq6uLm3DlENRZ5bYrTAkEA4reDYZKAl1vx+8EIMP/+2Z7ekydHfX0sTMDg
 kxhtRm6qtcywg01X847Y9ySgNepqleD+Ka2Wbucj1pOry8MoDQIVAIXgAB9GBLh4
 keUwLHBtpClnD5E8
------END DSA PRIVATE KEY-----
+-----END PRIVATE KEY-----
 )PEM";
-    
+
     return privateKeyPEM;
 }
 

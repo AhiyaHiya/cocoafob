@@ -77,11 +77,11 @@ auto IsKeyComplete(const KeyType keyType, const std::string keyText) -> bool
 {
     const auto keyTypeString = keyType == KeyType::Private ? "PRIVATE"s : "PUBLIC"s;
 
-    const auto beginKey = "-----BEGIN DSA "s +
+    const auto beginKey = "-----BEGIN "s +
                           keyTypeString +
                           " KEY-----"s;
 
-    const auto endKey = "-----END DSA "s +
+    const auto endKey = "-----END "s +
                         keyTypeString +
                         " KEY-----"s;
 
@@ -93,7 +93,7 @@ auto IsKeyComplete(const KeyType keyType, const std::string keyText) -> bool
 
 auto IsPublicKeyComplete(const std::string publicKey) -> bool
 {
-    const auto found = publicKey.find("-----BEGIN DSA PUBLIC KEY-----"s) != std::string::npos;
+    const auto found = publicKey.find("-----BEGIN PUBLIC KEY-----"s) != std::string::npos;
     return found;
 }
 

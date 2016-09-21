@@ -7,14 +7,13 @@
 //
 
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
-#include "CFob_ctest_common.hpp"
 #include "CFobLicGenerator.hpp"
-
+#include "CFob_ctest_common.hpp"
+#include "catch.hpp"
 
 SCENARIO("When given a bad private key", "[base] [generator]")
 {
-    const auto privateKeyPEM = "-----BEGIN DSA PRIVATE KEY-----\n";
+    const auto privateKeyPEM = "-----BEGIN PRIVATE KEY-----\n";
     auto licenseGen = cocoafob::CFobLicGenerator{privateKeyPEM};
     THEN("Factory function should return a nullptr")
     {
@@ -27,7 +26,7 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
     WHEN("Generator has a valid private key")
     {
         const auto privateKeyPEM = GetPrivateKey();
-        auto licenseGen          = CreateCFobLicGenerator<std::unique_ptr<CFobLicGenerator>>(privateKeyPEM);
+        auto licenseGen = CreateCFobLicGenerator<std::unique_ptr<CFobLicGenerator>>(privateKeyPEM);
 
         THEN("Generator should not be a nullptr")
         {
@@ -38,8 +37,8 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
             auto name = "Joe Bloggs";
             //auto nameData = licenseGen->GetNameData(name);
 
-            auto values           = licenseGen->GenerateRegCodeForName(name);
-            auto sucess           = std::get<0>(values);
+            auto values = licenseGen->GenerateRegCodeForName(name);
+            auto sucess = std::get<0>(values);
             auto registrationCode = std::get<1>(values);
 
             CHECK(sucess);
