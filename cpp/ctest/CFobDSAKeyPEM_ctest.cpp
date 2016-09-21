@@ -7,9 +7,9 @@
 //
 
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
 #include "CFobDSAKeyPEM.hpp"
 #include "CFob_ctest_common.hpp"
+#include "catch.hpp"
 
 SCENARIO("When a bad key is passed in", "[struct]")
 {
@@ -17,7 +17,7 @@ SCENARIO("When a bad key is passed in", "[struct]")
     {
         try
         {
-            auto&& key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, std::string{""}};
+            auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, std::string{""}};
             CHECK(false);
         }
         catch (...)
@@ -32,7 +32,7 @@ TEST_CASE("Good key test", "[struct]")
     try
     {
         auto pubKey = GetPartialPublicKey();
-        auto&& key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+        auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
         CHECK(true);
     }
     catch (...)
@@ -40,5 +40,3 @@ TEST_CASE("Good key test", "[struct]")
         CHECK(false);
     }
 }
-
-

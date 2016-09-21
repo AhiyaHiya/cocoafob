@@ -28,7 +28,6 @@ CFobDSAKeyPEM::CFobDSAKeyPEM(const KeyType keyType,
 CFobDSAKeyPEM::CFobDSAKeyPEM(CFobDSAKeyPEM &&other)
     : _keyType{other._keyType}, _keyText{other._keyText}, _dsaKey{other._dsaKey}
 {
-    
 }
 
 CFobDSAKeyPEM::operator DSA *() const
@@ -74,10 +73,10 @@ auto CFobDSAKeyPEM::SetUpDSAPtr() -> DSA *
     if (result == nullptr)
     {
         ERR_load_crypto_strings();
-        
+
         const auto message = (_keyType == KeyType::Private ? "Private"s : "Public"s) +
-                            " key dsa failure: "s +
-                            ERR_error_string(ERR_get_error(), nullptr);
+                             " key dsa failure: "s +
+                             ERR_error_string(ERR_get_error(), nullptr);
         DSA_free(dsa);
         throw std::runtime_error(message);
     }
