@@ -6,10 +6,10 @@
 //  Copyright © 2016 Jaime O. Rios. All rights reserved.
 //
 
-#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
+
 #include "CFobDSAKeyPEM.hpp"
 #include "CFob_ctest_common.hpp"
-#include "catch.hpp"
 
 SCENARIO("When a bad key is passed in", "[struct]")
 {
