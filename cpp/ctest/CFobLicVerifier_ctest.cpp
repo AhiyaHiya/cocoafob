@@ -6,9 +6,10 @@
 //  Copyright © 2016 Jaime O. Rios. All rights reserved.
 //
 
+#include "catch.hpp"
+
 #include "CFobLicVerifier.hpp"
 #include "CFob_ctest_common.hpp"
-#include "catch.hpp"
 #include <string>
 
 using namespace std::string_literals;

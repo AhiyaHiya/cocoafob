@@ -6,44 +6,32 @@
 //  Copyright © 2016 Jaime O. Rios. All rights reserved.
 //
 
-#define CATCH_CONFIG_MAIN
-#include "CFobLicGenerator.hpp"
-#include "CFob_ctest_common.hpp"
 #include "catch.hpp"
 
-SCENARIO("When given a bad private key", "[base] [generator]")
-{
-    const auto privateKeyPEM = "-----BEGIN PRIVATE KEY-----\n";
-    auto licenseGen = cocoafob::CFobLicGenerator{privateKeyPEM};
-    THEN("Factory function should return a nullptr")
-    {
-        //CHECK(licenseGen == nullptr);
-    }
-}
-#if (0)
+#include "CFobLicGenerator.hpp"
+#include "CFob_ctest_common.hpp"
+
 SCENARIO("With valid data, generator should create registration code", "[base] [generator]")
 {
-    WHEN("Generator has a valid private key")
+    try
     {
-        const auto privateKeyPEM = GetPrivateKey();
-        auto licenseGen = CreateCFobLicGenerator<std::unique_ptr<CFobLicGenerator>>(privateKeyPEM);
+        auto privateKeyPEM = GetPrivateKey();
+        auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, privateKeyPEM};
+        CHECK(true);
 
-        THEN("Generator should not be a nullptr")
-        {
-            REQUIRE(licenseGen != nullptr);
-        }
-        AND_THEN("Generator should produce a valid registration code")
-        {
-            auto name = "Joe Bloggs";
-            //auto nameData = licenseGen->GetNameData(name);
+        auto generator = cocoafob::CFobLicGenerator(std::forward<cocoafob::CFobDSAKeyPEM>(key));
 
-            auto values = licenseGen->GenerateRegCodeForName(name);
-            auto sucess = std::get<0>(values);
-            auto registrationCode = std::get<1>(values);
+        auto name = "Joe Bloggs";
 
-            CHECK(sucess);
-            CHECK(registrationCode != "");
-        }
+        auto values = generator.GenerateRegCodeForName(name);
+        auto sucess = std::get<0>(values);
+        auto registrationCode = std::get<1>(values);
+
+        CHECK(sucess);
+        CHECK(registrationCode != "");
+    }
+    catch (...)
+    {
+        CHECK(false);
     }
 }
-#endif

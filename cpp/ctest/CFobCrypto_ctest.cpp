@@ -6,24 +6,15 @@
 //  Copyright © 2016 Jaime O. Rios. All rights reserved.
 //
 
-#include "CFobCrypto.hpp"
 #include "catch.hpp"
 
-#if (0)
-SCENARIO("CreateDSAPubKeyFromPublicKeyPEM", "[utility]")
+#include "CFobCrypto.hpp"
+
+TEST_CASE("Public key exercise", "[utility]")
 {
-    GIVEN("An empty public string")
-    {
-        auto tupleResult =
-            cocoafob::CreateDSAPubKeyFromPublicKeyPEM("");
-        THEN("The result should be false")
-        {
-            auto result = std::get<0>(tupleResult);
-            CHECK_FALSE(result);
-        }
-    }
+    // this should fail compilation
+    CHECK(false);
 }
-#endif
 
 SCENARIO("Public key exercise", "[utility]")
 {
