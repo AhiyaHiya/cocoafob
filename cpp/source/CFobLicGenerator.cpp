@@ -33,11 +33,11 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) -> std::tu
         return {false, "Non-empty string required for name parameter"};
     }
 
-    auto digest = std::vector<uint8_t>(0, SHA_DIGEST_LENGTH);
+    auto digest = std::vector<uint8_t>(SHA_DIGEST_LENGTH, 0);
     SHA1((unsigned char *)name.data(), name.length(), digest.data());
 
     auto siglen = 0u;
-    auto sig = std::vector<uint8_t>(0, 100);
+    auto sig = std::vector<uint8_t>(100, 0);
     auto check = DSA_sign(NID_sha1,
                           digest.data(),
                           digest.size(),
@@ -51,8 +51,8 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) -> std::tu
     }
 
     auto bufSize = base32_encoder_buffer_size(sig.size());
-    auto buffer = std::vector<char>(0, bufSize + 1);
-    buffer[bufSize] = 0;
+    auto buffer = std::vector<char>(bufSize + 1, 0);
+    //buffer[bufSize] = 0;
 
     base32_encode((uint8_t *)buffer.data(),
                   bufSize,
