@@ -38,16 +38,17 @@ auto StripFormattingFromBase32EncodedString(std::string formattedString) -> std:
 
 auto FormatBase32EncodedString(std::string stringToFormat) -> std::string
 {
-    // Replace 9s with Is and 8s with Os
+    // Replace Os with 8s and Is with 9s
     std::replace(stringToFormat.begin(), stringToFormat.end(), 'I', '9');
     std::replace(stringToFormat.begin(), stringToFormat.end(), 'O', '8');
 
-    // Remove dashes from the registration key if they are there (dashes are optional).
+    // Cut off the padding
     stringToFormat.erase(std::remove(stringToFormat.begin(),
                                      stringToFormat.end(),
                                      '='),
                          stringToFormat.end());
 
+    // Add dashes every 5 characters
     auto index = 5;
     const auto dash = std::string{"-"};
     while (index < stringToFormat.length())
