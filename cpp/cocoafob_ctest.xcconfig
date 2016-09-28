@@ -1,0 +1,13 @@
+//
+//  cocoafob_ctest.xcconfig
+//  cocoafob
+//
+//  Created by Jaime Rios on 2016-09-27.
+//  Copyright © 2016 Jaime O. Rios. All rights reserved.
+//
+
+#include "cocoafob.xcconfig"
+
+GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES
+CLANG_ENABLE_CODE_COVERAGE= YES
+GCC_GENERATE_TEST_COVERAGE_FILES= YES
