@@ -49,14 +49,14 @@ y8MoDQ==
 
 auto GetPrivateKey() -> std::string
 {
-    const auto privateKeyPEM = R"PEM(-----BEGIN PRIVATE KEY-----
+    const auto privateKeyPEM = R"PEM(-----BEGIN DSA PRIVATE KEY-----
 MIH5AgEAAkEA8wm04e0QcQRoAVJWWnUw/4rQEKbLKjujJu6oyEv7Y2oT3itY5pbO
 bgYCHEu9FBizqq7apsWYSF3YXiRjKlg10wIVALfs9eVL10PhoV6zczFpi3C7FzWN
 AkBaPhALEKlgIltHsumHdTSBqaVoR1/bmlgw/BCC13IAsW40nkFNsK1OVwjo2ocn
 3MwW4Rdq6uLm3DlENRZ5bYrTAkEA4reDYZKAl1vx+8EIMP/+2Z7ekydHfX0sTMDg
 kxhtRm6qtcywg01X847Y9ySgNepqleD+Ka2Wbucj1pOry8MoDQIVAIXgAB9GBLh4
 keUwLHBtpClnD5E8
------END PRIVATE KEY-----
+-----END DSA PRIVATE KEY-----
 )PEM";
 
     return privateKeyPEM;
