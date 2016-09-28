@@ -75,7 +75,7 @@ auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::
 
 auto IsKeyComplete(const KeyType keyType, const std::string keyText) -> bool
 {
-    const auto keyTypeString = keyType == KeyType::Private ? "PRIVATE"s : "PUBLIC"s;
+    const auto keyTypeString = keyType == KeyType::Private ? "DSA PRIVATE"s : "PUBLIC"s;
 
     const auto beginKey = "-----BEGIN "s +
                           keyTypeString +
