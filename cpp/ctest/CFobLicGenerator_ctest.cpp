@@ -11,6 +11,8 @@
 #include "CFobLicGenerator.hpp"
 #include "CFob_ctest_common.hpp"
 
+using namespace std::string_literals;
+
 SCENARIO("With valid data, generator should create registration code", "[base] [generator]")
 {
     try
@@ -21,7 +23,7 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
 
         auto generator = cocoafob::CFobLicGenerator(std::forward<cocoafob::CFobDSAKeyPEM>(key));
 
-        auto name = "Joe Bloggs";
+        auto name = "decloner|Joe Bloggs"s;
 
         auto values = generator.GenerateRegCodeForName(name);
         auto sucess = std::get<0>(values);
