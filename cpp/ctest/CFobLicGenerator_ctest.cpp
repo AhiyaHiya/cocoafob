@@ -9,6 +9,7 @@
 #include "catch.hpp"
 
 #include "CFobLicGenerator.hpp"
+#include "CFobLicVerifier.hpp"
 #include "CFob_ctest_common.hpp"
 
 using namespace std::string_literals;
@@ -30,9 +31,18 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
         const auto registrationCode = std::get<1>(values);
 
         CHECK(sucess);
-        
-        const auto baselineRegCode = "GAWQE-F9AQP-XJCCL-PAFAX-NU5XX-EUG6W-KLT3H-VTEB9-A9KHJ-8DZ5R-DL74G-TU4BN-7ATPY-3N4XB-V4V27-Q"s;
-        CHECK(registrationCode == baselineRegCode);
+
+        CHECK(registrationCode != "");
+
+        const auto pubKeyS = GetPartialPublicKey();
+        const auto &&pubKey = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKeyS};
+
+        const auto licenseVer = cocoafob::CFobLicVerifier(std::forward<const cocoafob::CFobDSAKeyPEM>(pubKey));
+
+        const auto result = licenseVer.VerifyRegCodeForName(registrationCode, name);
+
+        const auto success = std::get<0>(result);
+        CHECK(success);
     }
     catch (...)
     {
