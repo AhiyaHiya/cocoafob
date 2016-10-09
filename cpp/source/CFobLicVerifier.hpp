@@ -17,7 +17,8 @@ namespace cocoafob
 class CFobLicVerifier
 {
   public:
-    CFobLicVerifier(CFobDSAKeyPEM&& dsaKey);
+    CFobLicVerifier(CFobDSAKeyPEM &&dsaKey);
+    CFobLicVerifier(const CFobDSAKeyPEM &&dsaKey);
 
     auto VerifyRegCodeForName(const std::string regCode, const std::string forName) -> std::tuple<bool, ErrorMessage>;
 

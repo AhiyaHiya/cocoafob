@@ -30,7 +30,7 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
 
     auto bio = BIO_MEM_uptr{BIO_new_mem_buf((void *)completeKey.c_str(), -1), ::BIO_free};
     auto dsa = DSA_new();
-    auto result = PEM_read_bio_DSA_PUBKEY(bio.get(), &dsa, NULL, NULL);
+    const auto result = PEM_read_bio_DSA_PUBKEY(bio.get(), &dsa, NULL, NULL);
 
     if (result != nullptr)
     {
@@ -57,7 +57,7 @@ auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::
 
     auto dsa = DSA_new();
     auto bio = BIO_MEM_uptr{BIO_new_mem_buf((void *)privateKey.c_str(), -1), ::BIO_free};
-    auto result = PEM_read_bio_DSAPrivateKey(bio.get(), &dsa, NULL, NULL);
+    const auto result = PEM_read_bio_DSAPrivateKey(bio.get(), &dsa, NULL, NULL);
 
     if (result != nullptr)
     {

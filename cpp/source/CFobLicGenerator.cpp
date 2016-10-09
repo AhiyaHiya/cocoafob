@@ -43,12 +43,12 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) const -> s
 
     auto siglen = 0u;
     auto sig = std::vector<uint8_t>(100, 0);
-    auto check = DSA_sign(NID_sha1,
-                          digest.data(),
-                          static_cast<int32_t>(digest.size()),
-                          sig.data(),
-                          &siglen,
-                          _dsaKey);
+    const auto check = DSA_sign(NID_sha1,
+                                digest.data(),
+                                static_cast<int32_t>(digest.size()),
+                                sig.data(),
+                                &siglen,
+                                _dsaKey);
 
     if (!check)
     {
@@ -58,7 +58,7 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) const -> s
     const auto bufSize = base32_encoder_buffer_size(sig.size());
     auto buffer = std::vector<char>(bufSize + 1, 0);
 
-    base32_encode((uint8_t *)buffer.data(),
+    base32_encode(reinterpret_cast<uint8_t *>(buffer.data()),
                   bufSize,
                   sig.data(),
                   sig.size());

@@ -22,7 +22,13 @@ using namespace std::string_literals;
 
 namespace cocoafob
 {
-CFobLicVerifier::CFobLicVerifier(CFobDSAKeyPEM&& dsaKey)
+CFobLicVerifier::CFobLicVerifier(CFobDSAKeyPEM &&dsaKey)
+    : _dsaKey{std::move(dsaKey)}
+{
+    ;
+}
+
+CFobLicVerifier::CFobLicVerifier(const CFobDSAKeyPEM &&dsaKey)
     : _dsaKey{std::move(dsaKey)}
 {
     ;
@@ -59,7 +65,6 @@ auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std:
                                   (int)sigSize,
                                   _dsaKey);
     auto result = check > 0 ? true : false;
-    
 
     const auto resultMessage = result ? "Verified"s : "Failed"s;
 
