@@ -17,17 +17,17 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
 {
     try
     {
-        auto privateKeyPEM = GetPrivateKey();
-        auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, privateKeyPEM};
+        const auto privateKeyPEM = GetPrivateKey();
+        const auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, privateKeyPEM};
         CHECK(true);
 
-        auto generator = cocoafob::CFobLicGenerator(std::forward<cocoafob::CFobDSAKeyPEM>(key));
+        const auto generator = cocoafob::CFobLicGenerator(std::forward<const cocoafob::CFobDSAKeyPEM>(key));
 
-        auto name = "decloner|Joe Bloggs"s;
+        const auto name = "decloner|Joe Bloggs"s;
 
         auto values = generator.GenerateRegCodeForName(name);
-        auto sucess = std::get<0>(values);
-        auto registrationCode = std::get<1>(values);
+        const auto sucess = std::get<0>(values);
+        const auto registrationCode = std::get<1>(values);
 
         CHECK(sucess);
         CHECK(registrationCode != "");

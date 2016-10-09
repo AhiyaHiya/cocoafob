@@ -31,6 +31,7 @@ struct CFobDSAKeyPEM
 
     // movable
     CFobDSAKeyPEM(CFobDSAKeyPEM &&other);
+    CFobDSAKeyPEM(const CFobDSAKeyPEM &&other);
 
     // not-copyable
     CFobDSAKeyPEM(CFobDSAKeyPEM const &) = delete;
