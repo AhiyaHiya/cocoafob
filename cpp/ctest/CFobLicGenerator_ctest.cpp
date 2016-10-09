@@ -30,7 +30,9 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
         const auto registrationCode = std::get<1>(values);
 
         CHECK(sucess);
-        CHECK(registrationCode != "");
+        
+        const auto baselineRegCode = "GAWQE-F9AQP-XJCCL-PAFAX-NU5XX-EUG6W-KLT3H-VTEB9-A9KHJ-8DZ5R-DL74G-TU4BN-7ATPY-3N4XB-V4V27-Q"s;
+        CHECK(registrationCode == baselineRegCode);
     }
     catch (...)
     {
