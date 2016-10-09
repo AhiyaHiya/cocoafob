@@ -20,7 +20,7 @@ class CFobLicVerifier
     CFobLicVerifier(CFobDSAKeyPEM &&dsaKey);
     CFobLicVerifier(const CFobDSAKeyPEM &&dsaKey);
 
-    auto VerifyRegCodeForName(const std::string regCode, const std::string forName) -> std::tuple<bool, ErrorMessage>;
+    auto VerifyRegCodeForName(const std::string regCode, const std::string forName) const -> std::tuple<bool, ErrorMessage>;
 
   private:
     CFobLicVerifier() = delete;
