@@ -34,7 +34,7 @@ CFobLicVerifier::CFobLicVerifier(const CFobDSAKeyPEM &&dsaKey)
     ;
 }
 
-auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std::string forName) -> std::tuple<bool, ErrorMessage>
+auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std::string forName) const -> std::tuple<bool, ErrorMessage>
 {
     if (regCode.length() == 0)
     {
@@ -55,7 +55,7 @@ auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std:
                                        (unsigned char *)strippedRegCode.c_str(),
                                        strippedRegCode.length());
 
-    auto digest = std::vector<uint8_t>(0, SHA_DIGEST_LENGTH);
+    auto digest = std::vector<uint8_t>(SHA_DIGEST_LENGTH, 0);
     SHA1((unsigned char *)forName.data(), forName.length(), digest.data());
 
     const auto check = DSA_verify(0,
