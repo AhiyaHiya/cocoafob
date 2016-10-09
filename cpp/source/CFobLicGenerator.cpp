@@ -55,13 +55,13 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) const -> s
         return {false, "Signing failed"};
     }
 
-    const auto bufSize = base32_encoder_buffer_size(sig.size());
+    const auto bufSize = base32_encoder_buffer_size(siglen);
     auto buffer = std::vector<char>(bufSize + 1, 0);
 
     base32_encode(reinterpret_cast<uint8_t *>(buffer.data()),
                   bufSize,
                   sig.data(),
-                  sig.size());
+                  siglen);
 
     const auto regCode = CFob::Internal::FormatBase32EncodedString(buffer.data());
 
