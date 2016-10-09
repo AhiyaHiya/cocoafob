@@ -26,7 +26,12 @@ CFobLicGenerator::CFobLicGenerator(CFobDSAKeyPEM &&dsaKey)
 {
 }
 
-auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) -> std::tuple<bool, RegCode>
+CFobLicGenerator::CFobLicGenerator(const CFobDSAKeyPEM &&dsaKey)
+    : _dsaKey{std::move(dsaKey)}
+{
+}
+
+auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) const -> std::tuple<bool, RegCode>
 {
     if (name.length() == 0)
     {
@@ -40,7 +45,7 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) -> std::tu
     auto sig = std::vector<uint8_t>(100, 0);
     auto check = DSA_sign(NID_sha1,
                           digest.data(),
-                          digest.size(),
+                          static_cast<int32_t>(digest.size()),
                           sig.data(),
                           &siglen,
                           _dsaKey);
@@ -50,16 +55,15 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) -> std::tu
         return {false, "Signing failed"};
     }
 
-    auto bufSize = base32_encoder_buffer_size(sig.size());
+    const auto bufSize = base32_encoder_buffer_size(sig.size());
     auto buffer = std::vector<char>(bufSize + 1, 0);
-    //buffer[bufSize] = 0;
 
     base32_encode((uint8_t *)buffer.data(),
                   bufSize,
                   sig.data(),
                   sig.size());
 
-    auto regCode = CFob::Internal::FormatBase32EncodedString(buffer.data());
+    const auto regCode = CFob::Internal::FormatBase32EncodedString(buffer.data());
 
     return {true, regCode};
 }

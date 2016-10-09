@@ -22,7 +22,8 @@ class CFobLicGenerator
 {
   public:
     CFobLicGenerator(CFobDSAKeyPEM &&dsaKey);
-    auto GenerateRegCodeForName(const std::string name) -> std::tuple<bool, RegCode>;
+    CFobLicGenerator(const CFobDSAKeyPEM &&dsaKey);
+    auto GenerateRegCodeForName(const std::string name) const -> std::tuple<bool, RegCode>;
 
   private:
     CFobLicGenerator() = delete;

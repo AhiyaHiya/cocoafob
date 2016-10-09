@@ -30,6 +30,11 @@ CFobDSAKeyPEM::CFobDSAKeyPEM(CFobDSAKeyPEM &&other)
 {
 }
 
+CFobDSAKeyPEM::CFobDSAKeyPEM(const CFobDSAKeyPEM &&other)
+    : _keyType{other._keyType}, _keyText{other._keyText}, _dsaKey{other._dsaKey}
+{
+}
+
 CFobDSAKeyPEM::operator DSA *() const
 {
     return _dsaKey;
