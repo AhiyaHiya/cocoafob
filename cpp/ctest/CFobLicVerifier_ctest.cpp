@@ -22,8 +22,8 @@ SCENARIO("License verifier should only be created if a public key is passed in",
         {
             try
             {
-                auto dsaKey = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, ""s};
-                auto verifier = cocoafob::CFobLicVerifier{std::forward<cocoafob::CFobDSAKeyPEM>(dsaKey)};
+                const auto dsaKey = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, ""s};
+                const auto verifier = cocoafob::CFobLicVerifier{std::forward<const cocoafob::CFobDSAKeyPEM>(dsaKey)};
                 CHECK(false);
             }
             catch (...)
@@ -41,8 +41,8 @@ SCENARIO("License generators should be created when a public key is passed in", 
         const auto publicKey = GetPublicKey();
         try
         {
-            auto dsaKey = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, publicKey};
-            auto licenseVer = cocoafob::CFobLicVerifier{std::forward<cocoafob::CFobDSAKeyPEM>(dsaKey)};
+            const auto dsaKey = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, publicKey};
+            const auto licenseVer = cocoafob::CFobLicVerifier{std::forward<const cocoafob::CFobDSAKeyPEM>(dsaKey)};
 
             THEN("The operation should not have thrown by now")
             {
@@ -113,7 +113,7 @@ SCENARIO("License verifier should work with complete PEM key", "[verifier] [publ
     GIVEN("A constructed non-nullptr instance to license verifier")
     {
         const auto publicKey = GetPublicKey();
-        auto licenseVer = CreateCFobLicVerifier(publicKey);
+        const auto licenseVer = CreateCFobLicVerifier(publicKey);
         REQUIRE(licenseVer != nullptr);
 
         WHEN("Good data is passed in")
@@ -121,7 +121,7 @@ SCENARIO("License verifier should work with complete PEM key", "[verifier] [publ
             const auto regCode = GetRegCode();
             const auto name = std::string{"Joe Bloggs"};
 
-            auto result = licenseVer->VerifyRegCodeForName(regCode, name);
+            const auto result = licenseVer->VerifyRegCodeForName(regCode, name);
 
             THEN("The result should not have any error")
             {
@@ -139,8 +139,8 @@ SCENARIO("License verifier should work with complete PEM key", "[verifier] [publ
 
 TEST_CASE("Exercise verifier", "[verifier]")
 {
-    auto pubKey = GetPartialPublicKey();
-    auto key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+    const auto pubKey = GetPartialPublicKey();
+    const auto key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
 
-    auto licenseVer = cocoafob::CFobLicVerifier(std::forward<cocoafob::CFobDSAKeyPEM>(key));
+    const auto licenseVer = cocoafob::CFobLicVerifier(std::forward<const cocoafob::CFobDSAKeyPEM>(key));
 }

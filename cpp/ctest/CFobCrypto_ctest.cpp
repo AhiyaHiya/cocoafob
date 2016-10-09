@@ -20,7 +20,7 @@ SCENARIO("Public key exercise", "[utility]")
 {
     WHEN("An empty string is passed")
     {
-        auto result = cocoafob::IsPublicKeyComplete("");
+        const auto result = cocoafob::IsPublicKeyComplete("");
         THEN("result should be false")
         {
             CHECK_FALSE(result);
@@ -28,7 +28,7 @@ SCENARIO("Public key exercise", "[utility]")
     }
     AND_WHEN("A garbage string is passed")
     {
-        auto result = cocoafob::IsPublicKeyComplete("Holy cow");
+        const auto result = cocoafob::IsPublicKeyComplete("Holy cow");
         THEN("result should be false")
         {
             CHECK_FALSE(result);

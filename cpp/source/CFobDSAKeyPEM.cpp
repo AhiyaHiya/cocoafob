@@ -54,7 +54,7 @@ auto CFobDSAKeyPEM::CheckKey(const std::string keyText) -> std::string
         throw std::invalid_argument("Non-empty DSA PEM key required"s);
     }
 
-    auto isCompleteKey = IsKeyComplete(_keyType, keyText);
+    const auto isCompleteKey = IsKeyComplete(_keyType, keyText);
 
     if (isCompleteKey)
     {
@@ -62,7 +62,7 @@ auto CFobDSAKeyPEM::CheckKey(const std::string keyText) -> std::string
     }
     else
     {
-        auto completeKey = CompleteKeyPEM(_keyType, keyText);
+        const auto completeKey = CompleteKeyPEM(_keyType, keyText);
         return completeKey;
     }
 }
@@ -72,7 +72,7 @@ auto CFobDSAKeyPEM::SetUpDSAPtr() -> DSA *
     auto dsa = DSA_new();
     auto bio = BIO_MEM_uptr{BIO_new_mem_buf((void *)_keyText.c_str(), -1), ::BIO_free};
 
-    auto result =
+    const auto result =
         _keyType == KeyType::Private ? PEM_read_bio_DSAPrivateKey(bio.get(), &dsa, NULL, NULL) : PEM_read_bio_DSA_PUBKEY(bio.get(), &dsa, NULL, NULL);
 
     if (result == nullptr)

@@ -17,7 +17,7 @@ SCENARIO("When a bad key is passed in", "[struct]")
     {
         try
         {
-            auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, std::string{""}};
+            const auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Private, std::string{""}};
             CHECK(false);
         }
         catch (...)
@@ -31,8 +31,8 @@ TEST_CASE("Good key test", "[struct]")
 {
     try
     {
-        auto pubKey = GetPartialPublicKey();
-        auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+        const auto pubKey = GetPartialPublicKey();
+        const auto &&key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
         CHECK(true);
     }
     catch (...)

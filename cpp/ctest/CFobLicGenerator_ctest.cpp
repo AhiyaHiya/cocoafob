@@ -25,7 +25,7 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
 
         const auto name = "decloner|Joe Bloggs"s;
 
-        auto values = generator.GenerateRegCodeForName(name);
+        const auto values = generator.GenerateRegCodeForName(name);
         const auto sucess = std::get<0>(values);
         const auto registrationCode = std::get<1>(values);
 
