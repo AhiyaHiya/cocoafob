@@ -1,0 +1,11 @@
+//
+//  cocoafob_static_debug.xcconfig
+//  cocoafob
+//
+//  Created by Jaime Rios on 2016-10-12.
+//  Copyright © 2016 Jaime O. Rios. All rights reserved.
+//
+
+#include "cocoafob.xcconfig"
+
+PRODUCT_NAME = cocoafob_sd
