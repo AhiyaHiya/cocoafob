@@ -42,36 +42,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2D153B291D73DA7F00B4273D /* decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decoder.c; path = source/base32/decoder.c; sourceTree = SOURCE_ROOT; };
-		2D153B2A1D73DA7F00B4273D /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decoder.h; path = source/base32/decoder.h; sourceTree = SOURCE_ROOT; };
-		2D153B2B1D73DA7F00B4273D /* encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encoder.c; path = source/base32/encoder.c; sourceTree = SOURCE_ROOT; };
-		2D153B2C1D73DA7F00B4273D /* encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encoder.h; path = source/base32/encoder.h; sourceTree = SOURCE_ROOT; };
+		2D153B291D73DA7F00B4273D /* decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decoder.c; path = ../source/base32/decoder.c; sourceTree = SOURCE_ROOT; };
+		2D153B2A1D73DA7F00B4273D /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decoder.h; path = ../source/base32/decoder.h; sourceTree = SOURCE_ROOT; };
+		2D153B2B1D73DA7F00B4273D /* encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encoder.c; path = ../source/base32/encoder.c; sourceTree = SOURCE_ROOT; };
+		2D153B2C1D73DA7F00B4273D /* encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encoder.h; path = ../source/base32/encoder.h; sourceTree = SOURCE_ROOT; };
 		2D15DA6F1CEB6274001F85AE /* cocoafob */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cocoafob; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D29A33E1D9B5170007F3038 /* cocoafob_ctest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = cocoafob_ctest.xcconfig; sourceTree = "<group>"; };
-		2D48F72A1D98B9A000D40E16 /* CFobMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobMain.cpp; path = ctest/CFobMain.cpp; sourceTree = "<group>"; };
-		2D4AA8C11D708E560021AAB6 /* CFob_ctest_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFob_ctest_common.cpp; path = ctest/CFob_ctest_common.cpp; sourceTree = SOURCE_ROOT; };
-		2D4AA8C21D708E560021AAB6 /* CFob_ctest_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFob_ctest_common.hpp; path = ctest/CFob_ctest_common.hpp; sourceTree = SOURCE_ROOT; };
-		2D8C37121D6F98590070093E /* CFobDataTypes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CFobDataTypes.hpp; path = source/CFobDataTypes.hpp; sourceTree = SOURCE_ROOT; };
-		2D8C37131D6F98D80070093E /* CFobCrypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobCrypto.cpp; path = source/CFobCrypto.cpp; sourceTree = SOURCE_ROOT; };
-		2D8C37141D6F98D80070093E /* CFobCrypto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobCrypto.hpp; path = source/CFobCrypto.hpp; sourceTree = SOURCE_ROOT; };
-		2D8C37171D6F9A510070093E /* CFobInternal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobInternal.cpp; path = source/CFobInternal.cpp; sourceTree = SOURCE_ROOT; };
-		2D8C37181D6F9A510070093E /* CFobInternal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobInternal.hpp; path = source/CFobInternal.hpp; sourceTree = SOURCE_ROOT; };
+		2D48F72A1D98B9A000D40E16 /* CFobMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobMain.cpp; path = ../ctest/CFobMain.cpp; sourceTree = "<group>"; };
+		2D4AA8C11D708E560021AAB6 /* CFob_ctest_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFob_ctest_common.cpp; path = ../ctest/CFob_ctest_common.cpp; sourceTree = SOURCE_ROOT; };
+		2D4AA8C21D708E560021AAB6 /* CFob_ctest_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFob_ctest_common.hpp; path = ../ctest/CFob_ctest_common.hpp; sourceTree = SOURCE_ROOT; };
+		2D8C37121D6F98590070093E /* CFobDataTypes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CFobDataTypes.hpp; path = ../source/CFobDataTypes.hpp; sourceTree = SOURCE_ROOT; };
+		2D8C37131D6F98D80070093E /* CFobCrypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobCrypto.cpp; path = ../source/CFobCrypto.cpp; sourceTree = SOURCE_ROOT; };
+		2D8C37141D6F98D80070093E /* CFobCrypto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobCrypto.hpp; path = ../source/CFobCrypto.hpp; sourceTree = SOURCE_ROOT; };
+		2D8C37171D6F9A510070093E /* CFobInternal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobInternal.cpp; path = ../source/CFobInternal.cpp; sourceTree = SOURCE_ROOT; };
+		2D8C37181D6F9A510070093E /* CFobInternal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobInternal.hpp; path = ../source/CFobInternal.hpp; sourceTree = SOURCE_ROOT; };
 		2D9128EF1CFFD500009A335D /* cocoafob.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = cocoafob.xcconfig; sourceTree = "<group>"; };
-		2DA699031D777518005B14F0 /* CFobDSAKeyPEM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobDSAKeyPEM.cpp; path = source/CFobDSAKeyPEM.cpp; sourceTree = SOURCE_ROOT; };
-		2DA699041D777518005B14F0 /* CFobDSAKeyPEM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobDSAKeyPEM.hpp; path = source/CFobDSAKeyPEM.hpp; sourceTree = SOURCE_ROOT; };
-		2DA699071D77AF19005B14F0 /* CFobDSAKeyPEM_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobDSAKeyPEM_ctest.cpp; path = ctest/CFobDSAKeyPEM_ctest.cpp; sourceTree = SOURCE_ROOT; };
+		2DA699031D777518005B14F0 /* CFobDSAKeyPEM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobDSAKeyPEM.cpp; path = ../source/CFobDSAKeyPEM.cpp; sourceTree = SOURCE_ROOT; };
+		2DA699041D777518005B14F0 /* CFobDSAKeyPEM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobDSAKeyPEM.hpp; path = ../source/CFobDSAKeyPEM.hpp; sourceTree = SOURCE_ROOT; };
+		2DA699071D77AF19005B14F0 /* CFobDSAKeyPEM_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobDSAKeyPEM_ctest.cpp; path = ../ctest/CFobDSAKeyPEM_ctest.cpp; sourceTree = SOURCE_ROOT; };
 		2DBB60401CEB882700105970 /* cocoafob_ctest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cocoafob_ctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicGenerator.cpp; path = source/CFobLicGenerator.cpp; sourceTree = SOURCE_ROOT; };
-		2DBB60421CEB88BC00105970 /* CFobLicGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobLicGenerator.hpp; path = source/CFobLicGenerator.hpp; sourceTree = SOURCE_ROOT; };
-		2DBB60451CEB88D400105970 /* CFobLicGenerator_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicGenerator_ctest.cpp; path = ctest/CFobLicGenerator_ctest.cpp; sourceTree = SOURCE_ROOT; };
-		2DC375A11D6FDFE3005A486F /* CFobCrypto_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobCrypto_ctest.cpp; path = ctest/CFobCrypto_ctest.cpp; sourceTree = SOURCE_ROOT; };
-		2DD05FC51CEB62C700214ECE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = consoleapp/main.cpp; sourceTree = SOURCE_ROOT; };
-		2DD05FC71CEB62E300214ECE /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicGenerator.cpp; path = ../source/CFobLicGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		2DBB60421CEB88BC00105970 /* CFobLicGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobLicGenerator.hpp; path = ../source/CFobLicGenerator.hpp; sourceTree = SOURCE_ROOT; };
+		2DBB60451CEB88D400105970 /* CFobLicGenerator_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicGenerator_ctest.cpp; path = ../ctest/CFobLicGenerator_ctest.cpp; sourceTree = SOURCE_ROOT; };
+		2DC375A11D6FDFE3005A486F /* CFobCrypto_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobCrypto_ctest.cpp; path = ../ctest/CFobCrypto_ctest.cpp; sourceTree = SOURCE_ROOT; };
+		2DD05FC71CEB62E300214ECE /* ../README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ../README.markdown; sourceTree = "<group>"; };
 		2DE01CCD1DAF1CF300F8F4E1 /* libcocoafob_s.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcocoafob_s.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicVerifier.cpp; path = source/CFobLicVerifier.cpp; sourceTree = SOURCE_ROOT; };
-		2DE994DA1CF501A60078994D /* CFobLicVerifier.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobLicVerifier.hpp; path = source/CFobLicVerifier.hpp; sourceTree = SOURCE_ROOT; };
-		2DE994DE1CF501CA0078994D /* CFobLicVerifier_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicVerifier_ctest.cpp; path = ctest/CFobLicVerifier_ctest.cpp; sourceTree = SOURCE_ROOT; };
-		2DEFBE691D6FB77200F211B1 /* download_required_libs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = download_required_libs.sh; sourceTree = "<group>"; };
+		2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicVerifier.cpp; path = ../source/CFobLicVerifier.cpp; sourceTree = SOURCE_ROOT; };
+		2DE994DA1CF501A60078994D /* CFobLicVerifier.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobLicVerifier.hpp; path = ../source/CFobLicVerifier.hpp; sourceTree = SOURCE_ROOT; };
+		2DE994DE1CF501CA0078994D /* CFobLicVerifier_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicVerifier_ctest.cpp; path = ../ctest/CFobLicVerifier_ctest.cpp; sourceTree = SOURCE_ROOT; };
+		2DEFBE691D6FB77200F211B1 /* ../download_required_libs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ../download_required_libs.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +116,7 @@
 				2D9128F01CFFD504009A335D /* xcconfig */,
 				2DE994DD1CF501AC0078994D /* source */,
 				2DD05FC91CEB636000214ECE /* unittest */,
-				2DD05FC71CEB62E300214ECE /* README.markdown */,
-				2DD05FC41CEB62BC00214ECE /* consoleapp */,
+				2DD05FC71CEB62E300214ECE /* ../README.markdown */,
 				2D15DA701CEB6274001F85AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,14 +163,6 @@
 			name = xcconfig;
 			sourceTree = "<group>";
 		};
-		2DD05FC41CEB62BC00214ECE /* consoleapp */ = {
-			isa = PBXGroup;
-			children = (
-				2DD05FC51CEB62C700214ECE /* main.cpp */,
-			);
-			name = consoleapp;
-			sourceTree = "<group>";
-		};
 		2DD05FC91CEB636000214ECE /* unittest */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +192,7 @@
 		2DEFBE681D6FB76800F211B1 /* script */ = {
 			isa = PBXGroup;
 			children = (
-				2DEFBE691D6FB77200F211B1 /* download_required_libs.sh */,
+				2DEFBE691D6FB77200F211B1 /* ../download_required_libs.sh */,
 			);
 			name = script;
 			sourceTree = "<group>";
@@ -558,6 +548,7 @@
 				2DE01CD61DAF1CF300F8F4E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
