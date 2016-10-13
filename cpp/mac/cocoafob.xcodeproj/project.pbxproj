@@ -68,7 +68,7 @@
 		2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicGenerator.cpp; path = ../source/CFobLicGenerator.cpp; sourceTree = SOURCE_ROOT; };
 		2DBB60451CEB88D400105970 /* CFobLicGenerator_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicGenerator_ctest.cpp; path = ../ctest/CFobLicGenerator_ctest.cpp; sourceTree = SOURCE_ROOT; };
 		2DC375A11D6FDFE3005A486F /* CFobCrypto_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobCrypto_ctest.cpp; path = ../ctest/CFobCrypto_ctest.cpp; sourceTree = SOURCE_ROOT; };
-		2DD05FC71CEB62E300214ECE /* ../README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ../README.markdown; sourceTree = "<group>"; };
+		2DD05FC71CEB62E300214ECE /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
 		2DE01CCD1DAF1CF300F8F4E1 /* libcocoafob_sd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcocoafob_sd.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicVerifier.cpp; path = ../source/CFobLicVerifier.cpp; sourceTree = SOURCE_ROOT; };
 		2DE994DE1CF501CA0078994D /* CFobLicVerifier_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicVerifier_ctest.cpp; path = ../ctest/CFobLicVerifier_ctest.cpp; sourceTree = SOURCE_ROOT; };
@@ -114,11 +114,11 @@
 		2D15DA661CEB6273001F85AE = {
 			isa = PBXGroup;
 			children = (
+				2DD05FC71CEB62E300214ECE /* README.markdown */,
 				2DEFBE681D6FB76800F211B1 /* script */,
 				2D9128F01CFFD504009A335D /* xcconfig */,
 				2DE994DD1CF501AC0078994D /* source */,
 				2DD05FC91CEB636000214ECE /* unittest */,
-				2DD05FC71CEB62E300214ECE /* ../README.markdown */,
 				2D15DA701CEB6274001F85AE /* Products */,
 			);
 			sourceTree = "<group>";
