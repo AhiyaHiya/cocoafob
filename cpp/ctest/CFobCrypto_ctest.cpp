@@ -6,15 +6,8 @@
 //  Copyright © 2016 Jaime O. Rios. All rights reserved.
 //
 
-#include "catch.hpp"
-
 #include "CFobCrypto.hpp"
-
-TEST_CASE("Public key exercise", "[utility]")
-{
-    // this should fail compilation
-    CHECK(false);
-}
+#include "catch.hpp"
 
 SCENARIO("Public key exercise", "[utility]")
 {
