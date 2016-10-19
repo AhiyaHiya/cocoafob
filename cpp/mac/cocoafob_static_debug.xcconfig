@@ -9,3 +9,5 @@
 #include "cocoafob.xcconfig"
 
 PRODUCT_NAME = cocoafob_sd
+
+HEADER_SEARCH_PATHS = $PROJECT_DIR/components/openssl/include /Users/jaimerios/Development/GitHub/cocoafob/cpp/components/openssl/include
