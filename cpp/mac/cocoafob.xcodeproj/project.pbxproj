@@ -22,6 +22,10 @@
 		2D48F7281D98B95E00D40E16 /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B291D73DA7F00B4273D /* decoder.c */; };
 		2D48F7291D98B95E00D40E16 /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B2B1D73DA7F00B4273D /* encoder.c */; };
 		2D48F72B1D98B9A000D40E16 /* CFobMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D48F72A1D98B9A000D40E16 /* CFobMain.cpp */; };
+		2D8AF2DF1DB70D7600AFD89F /* CFobLicGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */; };
+		2D8AF2E01DB70D7900AFD89F /* CFobLicVerifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */; };
+		2D8AF2E11DB70DF000AFD89F /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B291D73DA7F00B4273D /* decoder.c */; };
+		2D8AF2E21DB70DF000AFD89F /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B2B1D73DA7F00B4273D /* encoder.c */; };
 		2D8C37151D6F98D80070093E /* CFobCrypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C37131D6F98D80070093E /* CFobCrypto.cpp */; };
 		2D8C37191D6F9A510070093E /* CFobInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C37171D6F9A510070093E /* CFobInternal.cpp */; };
 		2DA699051D777518005B14F0 /* CFobDSAKeyPEM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699031D777518005B14F0 /* CFobDSAKeyPEM.cpp */; };
@@ -368,6 +372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D8AF2E01DB70D7900AFD89F /* CFobLicVerifier.cpp in Sources */,
+				2D8AF2E11DB70DF000AFD89F /* decoder.c in Sources */,
+				2D8AF2E21DB70DF000AFD89F /* encoder.c in Sources */,
+				2D8AF2DF1DB70D7600AFD89F /* CFobLicGenerator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,13 +501,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D8A225A1DAF203500CE8FB3 /* cocoafob_static_debug.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				DEVELOPMENT_TEAM = 6Y9B2NECZ9;
 				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -510,13 +514,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D8A225B1DAF203500CE8FB3 /* cocoafob_static_release.xcconfig */;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				DEVELOPMENT_TEAM = 6Y9B2NECZ9;
 				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
