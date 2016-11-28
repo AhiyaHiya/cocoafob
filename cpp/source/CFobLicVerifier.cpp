@@ -64,7 +64,7 @@ auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std:
                                   sig.data(),
                                   (int)sigSize,
                                   _dsaKey);
-    auto result = check > 0 ? true : false;
+    const auto result = check > 0 ? true : false;
 
     const auto resultMessage = result ? "Verified"s : "Failed"s;
 
