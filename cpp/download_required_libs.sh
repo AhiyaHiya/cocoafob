@@ -29,8 +29,8 @@ SetupOpenSSL()
         cd components/openssl_src
         git clone -b OpenSSL_1_0_2-stable git://git.openssl.org/openssl.git
         cd openssl
-
-        ./Configure darwin64-x86_64-cc --prefix=$PWD/macos_build_10.11 --openssldir=$PWD/macos_build_10.11/openssl
+        # TODO; http://stackoverflow.com/questions/25530429/build-multiarch-openssl-on-os-x/25531033#25531033
+        ./Configure darwin64-x86_64-cc --prefix=$PWD/macos_build_10.12 --openssldir=$PWD/macos_build_10.12/openssl
         make
         make test
         make -j 8 install
