@@ -3,9 +3,7 @@
 set -e
 set -u
 
-CURRENT_PATH=$PWD
-
-function BuildUnitTests()
+BuildUnitTests()
 {
 	cd mac
 	xcodebuild -project cocoafob.xcodeproj -target cocoafob_ctest -configuration Debug -verbose CONFIGURATION_BUILD_DIR=xcbuild clean build
@@ -14,7 +12,7 @@ function BuildUnitTests()
 	cd $CURRENT_PATH
 }
 
-function BuildProject()
+BuildProject()
 {
 	cd mac
 	xcodebuild -project cocoafob.xcodeproj -target "static lib" -configuration Debug -verbose CONFIGURATION_BUILD_DIR=xcbuild clean build
@@ -23,4 +21,10 @@ function BuildProject()
 	cd $CURRENT_PATH
 }
 
-BuildProject
+main()
+{
+	BuildProject
+}
+
+CURRENT_PATH=$PWD
+main
