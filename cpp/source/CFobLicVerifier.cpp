@@ -22,19 +22,21 @@ using namespace std::string_literals;
 
 namespace cocoafob
 {
-CFobLicVerifier::CFobLicVerifier(CFobDSAKeyPEM &&dsaKey)
+CFobLicVerifier::CFobLicVerifier(CFobDSAKeyPEM&& dsaKey)
     : _dsaKey{std::move(dsaKey)}
 {
     ;
 }
 
-CFobLicVerifier::CFobLicVerifier(const CFobDSAKeyPEM &&dsaKey)
+CFobLicVerifier::CFobLicVerifier(const CFobDSAKeyPEM&& dsaKey)
     : _dsaKey{std::move(dsaKey)}
 {
     ;
 }
 
-auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std::string forName) const -> std::tuple<bool, ErrorMessage>
+auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode,
+                                           const std::string forName) const
+    -> std::tuple< bool, ErrorMessage >
 {
     if (regCode.length() == 0)
     {
@@ -47,27 +49,21 @@ auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode, const std:
     }
 
     const auto strippedRegCode = CFob::Internal::StripFormattingFromBase32EncodedString(regCode);
-    const auto decodedSize = base32_decoder_buffer_size(strippedRegCode.length());
+    const auto decodedSize     = base32_decoder_buffer_size(strippedRegCode.length());
 
-    auto sig = std::vector<uint8_t>(decodedSize, 0);
-    const auto sigSize = base32_decode(sig.data(),
-                                       decodedSize,
-                                       (unsigned char *)strippedRegCode.c_str(),
-                                       strippedRegCode.length());
+    auto       sig     = std::vector< uint8_t >(decodedSize, 0);
+    const auto sigSize = base32_decode(
+        sig.data(), decodedSize, (unsigned char*)strippedRegCode.c_str(), strippedRegCode.length());
 
-    auto digest = std::vector<uint8_t>(SHA_DIGEST_LENGTH, 0);
-    SHA1((unsigned char *)forName.data(), forName.length(), digest.data());
+    auto digest = std::vector< uint8_t >(SHA_DIGEST_LENGTH, 0);
+    SHA1((unsigned char*)forName.data(), forName.length(), digest.data());
 
-    const auto check = DSA_verify(0,
-                                  digest.data(),
-                                  static_cast<int32_t>(digest.size()),
-                                  sig.data(),
-                                  (int)sigSize,
-                                  _dsaKey);
+    const auto check = DSA_verify(
+        0, digest.data(), static_cast< int32_t >(digest.size()), sig.data(), (int)sigSize, _dsaKey);
     const auto result = check > 0 ? true : false;
 
     const auto resultMessage = result ? "Verified"s : "Failed"s;
 
-    return {result, resultMessage};
+    return std::make_tuple(result, resultMessage);
 }
 }
