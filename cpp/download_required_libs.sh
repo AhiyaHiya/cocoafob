@@ -2,45 +2,11 @@
 
 set -e
 set -u
-#set -x
 
-function CryptoppSetup()
+SetupCatch()
 {
-	echo "Attempting to get catch c++ unit testing single header file"
-	cd components/catch/include/
-	curl -O https://raw.githubusercontent.com/philsquared/Catch/master/single_include/catch.hpp 
-	cd ../../..
-
-
-	echo "Attempting to download cryptopp563 source and build libraries from source"
-	mkdir cryptopp563_src
-	cd cryptopp563_src
-	curl -O https://www.cryptopp.com/cryptopp563.zip
-	unzip cryptopp563.zip
-
-	echo 'Attempting to get PEM pack, required for PEM decoding'
-	curl -O http://www.cryptopp.com/w/images/5/5a/Pem-pack.zip
-	unzip Pem-pack.zip
-
-	echo "Building cryptopp563"
-	PREFIX=./xbuild_dir make
-	PREFIX=./xbuild_dir make install
-
-
-	echo "Moving output to components folder"
-	mv xbuild_dir/bin ../components/cryptopp/
-	mv xbuild_dir/include ../components/cryptopp/
-	mv xbuild_dir/lib ../components/cryptopp/
-
-	echo "Removing cryptopp563 source folder"
-	cd ..
-    rm -rf cryptopp563_src
-
-    cd $CFOB_CURRENT_PATH
-}
-
-function SetupCatch()
-{
+	printf "${FUNCNAME[0]}\n"
+	
     if [[ ! -d components/catch/ ]]; then
         echo "*********************************"
         echo "${FUNCNAME[0]}"
@@ -52,8 +18,10 @@ function SetupCatch()
     fi
 }
 
-function SetupOpenSSL()
+SetupOpenSSL()
 {
+	printf "${FUNCNAME[0]}\n"
+	
     if [[ ! -d components/openssl ]]; then
         echo "*********************************"
         echo "${FUNCNAME[0]}"
@@ -76,8 +44,10 @@ function SetupOpenSSL()
     fi
 }
 
-function SetupXcodeCoverage()
+SetupXcodeCoverage()
 {
+	printf "${FUNCNAME[0]}\n"
+	
     if [[ ! -d components/XcodeCoverage/ ]]; then
         echo "*********************************"
         echo "${FUNCNAME[0]}"
@@ -91,16 +61,22 @@ function SetupXcodeCoverage()
     fi
 }
 
+main()
+{
+	printf "${FUNCNAME[0]}\n"
+	
+	if [[ ! -d components ]]; then
+	    mkdir components/
+	fi
 
+	SetupCatch
+	SetupOpenSSL
+	SetupXcodeCoverage	
+	printf "Download and install operation complete\n"
+}
 
-if [[ ! -d components ]]; then
-    mkdir components/
-fi
 
 CFOB_CURRENT_PATH=$PWD
 
-SetupCatch
-SetupOpenSSL
-SetupXcodeCoverage
+main
 
-echo "Download and install operation complete"
