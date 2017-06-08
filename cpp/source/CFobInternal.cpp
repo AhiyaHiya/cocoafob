@@ -7,6 +7,7 @@
 //
 
 #include "CFobInternal.hpp"
+#include <algorithm> 
 
 namespace CFob
 {
