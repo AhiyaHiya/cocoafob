@@ -6,30 +6,38 @@ EXIT/b
 
 :SetupOpenSSL
 	ECHO SetupOpenSSL
-	CALL :DownloadOpenSSL
+	REM CALL :DownloadOpenSSL
 	CALL :BuildOpenSSL
 	EXIT/b
 	
 :DownloadOpenSSL
-	IF EXIST %LOCAL_CURRENT_PATH%\components\openssl\win (
+	IF EXIST %LOCAL_CURRENT_PATH%\components\openssl\win\tmp_src (
 		ECHO "components openssl win exist"
 	) ELSE (
 		ECHO "components DOESN'T exist"
-		MKDIR %LOCAL_CURRENT_PATH%\components\openssl\win
+		MKDIR %LOCAL_CURRENT_PATH%\components\openssl\win\tmp_src
 	)
-	MKDIR %LOCAL_CURRENT_PATH%\components\openssl\win\tmp_src
-	
+	CD %LOCAL_CURRENT_PATH%\components\openssl\win\tmp_src
 	git.exe clone -b OpenSSL_1_0_2-stable https://github.com/openssl/openssl
 
 	EXIT/b 
 	
-	REM Take a look at the install for Vendors cause you did this for Windows
+REM Used information from http://developer.covenanteyes.com/building-openssl-for-visual-studio/
+REM for below build settings
 :BuildOpenSSL
 	CD %LOCAL_CURRENT_PATH%\components\openssl\win\tmp_src\openssl
-	REM perl Configure { VC-WIN32 | VC-WIN64A | VC-WIN64I | VC-CE } 
-	perl Configure VC-WIN64I
-	nmake 
-	nmake test 
-	REM nmake install 
+	
+	perl Configure VC-WIN32 --prefix=%LOCAL_CURRENT_PATH%\components\openssl\win\tmp_src\openssl\build_win32
+	CALL ms\do_ms
+	nmake -f ms\ntdll.mak
+	nmake -f ms\ntdll.mak test
+	nmake -f ms\ntdll.mak install
+	
+	CD %LOCAL_CURRENT_PATH%\components\openssl\win\tmp_src\openssl
+	perl Configure VC-WIN64A --prefix=%LOCAL_CURRENT_PATH%\components\openssl\win\tmp_src\openssl\build_x64
+	CALL ms\do_win64a
+	nmake -f ms\ntdll.mak
+	nmake -f ms\ntdll.mak test
+	nmake -f ms\ntdll.mak install 
 
 	EXIT/b 
