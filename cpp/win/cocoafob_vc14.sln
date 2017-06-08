@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cocoafob_vc14", "cocoafob_vc14.vcxproj", "{5270F6A4-706B-4CE6-8389-3C96E98ECA97}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FD15671-6CEE-418D-BCFF-FDF7A659A2BA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cocoafob_ctest_vc14", "cocoafob_ctest_vc14.vcxproj", "{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +25,14 @@ Global
 		{5270F6A4-706B-4CE6-8389-3C96E98ECA97}.Release|x64.Build.0 = Release|x64
 		{5270F6A4-706B-4CE6-8389-3C96E98ECA97}.Release|x86.ActiveCfg = Release|Win32
 		{5270F6A4-706B-4CE6-8389-3C96E98ECA97}.Release|x86.Build.0 = Release|Win32
+		{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}.Debug|x64.ActiveCfg = Debug|x64
+		{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}.Debug|x64.Build.0 = Debug|x64
+		{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}.Debug|x86.ActiveCfg = Debug|Win32
+		{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}.Debug|x86.Build.0 = Debug|Win32
+		{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}.Release|x64.ActiveCfg = Release|x64
+		{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}.Release|x64.Build.0 = Release|x64
+		{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}.Release|x86.ActiveCfg = Release|Win32
+		{1D170B71-5E9C-4D24-BC4C-B9F64FF5C7AE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
