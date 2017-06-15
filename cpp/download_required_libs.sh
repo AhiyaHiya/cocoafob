@@ -1,15 +1,15 @@
 #!/bin/bash
 
-#set -e
+set -o errexit
 
 SetupCatch()
 {
     printf "*********************************\n${FUNCNAME[0]}\n"
     
-    if [[ ! -d components/catch/ ]]; then
+    if [[ ! -d ${CFOB_CURRENT_PATH}/components/catch/ ]]; then
         
-        mkdir -p components/catch/include/
-        cd components/catch/include/
+        mkdir -p ${CFOB_CURRENT_PATH}/components/catch/include/
+        cd ${CFOB_CURRENT_PATH}/components/catch/include/
         curl -O https://raw.githubusercontent.com/philsquared/Catch/master/single_include/catch.hpp
         cd $CFOB_CURRENT_PATH
         printf "*********************************\n"
@@ -30,6 +30,8 @@ BuildOpenSSL_WithBit()
     make >> "./openssl_make-x${ARCH}.log" 2>&1
     make -j ${CFOB_CORE_COUNT} install_sw >> "./openssl_make_install-x${ARCH}.log" 2>&1
 
+    set -x
+    
     mv ${CFOB_SSL_DIR}/include/openssl/opensslconf.h ${CFOB_SSL_DIR}/include/openssl/opensslconf-x${ARCH}.h
     mv ${CFOB_SSL_DIR}/include/openssl/bn.h ${CFOB_SSL_DIR}/include/openssl/bn-x${ARCH}.h
     mv ${CFOB_SSL_DIR}/ ${CFOB_SSL_BUILD_DIR}/ssl-x${ARCH}
@@ -107,6 +109,8 @@ CreateOpenSSL_FatBinary()
 # http://stackoverflow.com/questions/25530429/build-multiarch-openssl-on-os-x/25531033#25531033
 BuildOpenSSL()
 {
+    cd ${CFOB_CURRENT_PATH}/components/openssl
+
     if [[ ! -d ${CFOB_SSL_BUILD_DIR} ]]; then
         mkdir -p ${CFOB_SSL_BUILD_DIR}
     fi
@@ -122,37 +126,38 @@ BuildOpenSSL()
     CreateOpenSSL_FatBinary
 }
 
+DownloadOpenSSL()
+{
+    cd ${CFOB_CURRENT_PATH}/components/
+    if [[ ! -d ${CFOB_CURRENT_PATH}/components/openssl_src ]]; then
+        mkdir -p ${CFOB_CURRENT_PATH}/components/openssl_src
+    fi
+    git clone -b OpenSSL_1_0_2-stable https://github.com/openssl/openssl
+}
+
 SetupOpenSSL()
 {
     printf "*********************************\n${FUNCNAME[0]}\n"
     
-    if [[ ! -d components/openssl ]]; then
-        
-        mkdir -p components/openssl_src
-        cd components/openssl_src
+    DownloadOpenSSL
+    BuildOpenSSL    
+    cd ${CFOB_CURRENT_PATH}/components/
+    
+    mv openssl_src/openssl/macos_build_10.12 ./openssl
+    rm -fR openssl_src
 
-        git clone -b OpenSSL_1_0_2-stable https://github.com/openssl/openssl
-        cd openssl
-        
-        BuildOpenSSL
-
-        cd ../..
-        mv openssl_src/openssl/macos_build_10.12 ./openssl
-        rm -fR openssl_src
-
-        cd ${CFOB_CURRENT_PATH}
-        printf "*********************************\n"
-    fi
+    cd ${CFOB_CURRENT_PATH}
+    printf "*********************************\n"
 }
 
 SetupXcodeCoverage()
 {
     printf "*********************************\n${FUNCNAME[0]}\n"
     
-    if [[ ! -d components/XcodeCoverage/ ]]; then
-        cd components/
+    if [[ ! -d ${CFOB_CURRENT_PATH}/components/XcodeCoverage/ ]]; then
+        cd ${CFOB_CURRENT_PATH}/components/
         git clone https://github.com/jonreid/XcodeCoverage.git
-        cd XcodeCoverage
+        cd ${CFOB_CURRENT_PATH}/components/XcodeCoverage
         rm -fR .git
         rm .gitignore
         cd ${CFOB_CURRENT_PATH}
@@ -164,13 +169,13 @@ main()
 {
     printf "*********************************\n${FUNCNAME[0]}\n"
     
-    if [[ ! -d components ]]; then
-        mkdir components/
+    if [[ ! -d ${CFOB_CURRENT_PATH}/components ]]; then
+        mkdir ${CFOB_CURRENT_PATH}/components/
     fi
 
-    SetupCatch
+#    SetupCatch
     SetupOpenSSL
-    SetupXcodeCoverage  
+ #   SetupXcodeCoverage  
     printf "Download and install operation complete\n"
 }
 
