@@ -7,7 +7,5 @@
 //
 
 #include "cocoafob.xcconfig"
+#include "Pods/XcodeCoverage/XcodeCoverage.xcconfig"
 
-//CLANG_ENABLE_CODE_COVERAGE= YES
-GCC_GENERATE_TEST_COVERAGE_FILES = YES
-GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES

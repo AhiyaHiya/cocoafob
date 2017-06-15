@@ -8,3 +8,5 @@ xcuserdata
 *.xcscmblueprint
 cpp/components
 cpp/mac/xcbuild
+cpp/mac/Pods
+Podfile.lock

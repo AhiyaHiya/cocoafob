@@ -1,0 +1,27 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'cocoafob' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for cocoafob
+
+end
+
+target 'cocoafob_ctest' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for cocoafob_ctest
+  pod 'OpenSSL-Universal', '~> 1.0'
+  pod 'XcodeCoverage', '~> 1.3'
+end
+
+target 'static lib' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for static lib
+  pod 'OpenSSL-Universal'
+end
