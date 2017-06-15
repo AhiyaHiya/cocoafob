@@ -10,4 +10,4 @@
 
 PRODUCT_NAME = cocoafob_s
 
-HEADER_SEARCH_PATHS = $PROJECT_DIR/../components/openssl/include
+#include "Pods/Target Support Files/Pods-static lib/Pods-static lib.release.xcconfig"

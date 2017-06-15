@@ -1,574 +1,1732 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>016CBE8D86C81824D72A70DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B176D9166CA638BB4036B676</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>08DB6E2E7464D35E9BBCD49E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5CBEFE7613A815436E64ECFA</string>
+				<string>B176D9166CA638BB4036B676</string>
+				<string>312D82E6C8E4B7CF5A338E34</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D153B201D73D9D800B4273D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2D153B291D73DA7F00B4273D</string>
+				<string>2D153B2A1D73DA7F00B4273D</string>
+				<string>2D153B2B1D73DA7F00B4273D</string>
+				<string>2D153B2C1D73DA7F00B4273D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>base32</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D153B291D73DA7F00B4273D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.c</string>
+			<key>name</key>
+			<string>decoder.c</string>
+			<key>path</key>
+			<string>../source/base32/decoder.c</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D153B2A1D73DA7F00B4273D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>decoder.h</string>
+			<key>path</key>
+			<string>../source/base32/decoder.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D153B2B1D73DA7F00B4273D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.c</string>
+			<key>name</key>
+			<string>encoder.c</string>
+			<key>path</key>
+			<string>../source/base32/encoder.c</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D153B2C1D73DA7F00B4273D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>encoder.h</string>
+			<key>path</key>
+			<string>../source/base32/encoder.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D153B2D1D73DA7F00B4273D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D153B291D73DA7F00B4273D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D153B2F1D73DA7F00B4273D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D153B2B1D73DA7F00B4273D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D157AE41D98B6E400DA7608</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D8C37131D6F98D80070093E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D157AE51D98B7A400DA7608</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DC375A11D6FDFE3005A486F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D15DA661CEB6273001F85AE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2DE99DDA1EF2150000B31202</string>
+				<string>2DD05FC71CEB62E300214ECE</string>
+				<string>2DEFBE681D6FB76800F211B1</string>
+				<string>2D9128F01CFFD504009A335D</string>
+				<string>2DE994DD1CF501AC0078994D</string>
+				<string>2DD05FC91CEB636000214ECE</string>
+				<string>2D15DA701CEB6274001F85AE</string>
+				<string>E86EF07F2BC7C86A7158614C</string>
+				<string>08DB6E2E7464D35E9BBCD49E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D15DA671CEB6273001F85AE</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0800</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Jaime O. Rios</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>2D15DA6E1CEB6274001F85AE</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+					</dict>
+					<key>2DE01CCC1DAF1CF300F8F4E1</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.0</string>
+						<key>DevelopmentTeam</key>
+						<string>6Y9B2NECZ9</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D15DA6A1CEB6274001F85AE</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>2D15DA661CEB6273001F85AE</string>
+			<key>productRefGroup</key>
+			<string>2D15DA701CEB6274001F85AE</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>2D15DA6E1CEB6274001F85AE</string>
+				<string>2DBB60371CEB882700105970</string>
+				<string>2DE01CCC1DAF1CF300F8F4E1</string>
+			</array>
+		</dict>
+		<key>2D15DA6A1CEB6274001F85AE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2D15DA741CEB6274001F85AE</string>
+				<string>2D15DA751CEB6274001F85AE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2D15DA6B1CEB6274001F85AE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2DA699051D777518005B14F0</string>
+				<string>2D153B2D1D73DA7F00B4273D</string>
+				<string>2DE994DB1CF501A60078994D</string>
+				<string>2DA6990B1D77C10A005B14F0</string>
+				<string>2D153B2F1D73DA7F00B4273D</string>
+				<string>2D8C37151D6F98D80070093E</string>
+				<string>2D8C37191D6F9A510070093E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2D15DA6C1CEB6274001F85AE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E2283F2AA551C158B6C0F5F9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2D15DA6D1CEB6274001F85AE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string>/usr/share/man/man1/</string>
+			<key>dstSubfolderSpec</key>
+			<string>0</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>1</string>
+		</dict>
+		<key>2D15DA6E1CEB6274001F85AE</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2D15DA761CEB6274001F85AE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5415CF9662B599D5706414B7</string>
+				<string>2D15DA6B1CEB6274001F85AE</string>
+				<string>2D15DA6C1CEB6274001F85AE</string>
+				<string>2D15DA6D1CEB6274001F85AE</string>
+				<string>CD878788F4975A101F202AF7</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>cocoafob</string>
+			<key>productName</key>
+			<string>cocoafob</string>
+			<key>productReference</key>
+			<string>2D15DA6F1CEB6274001F85AE</string>
+			<key>productType</key>
+			<string>com.apple.product-type.tool</string>
+		</dict>
+		<key>2D15DA6F1CEB6274001F85AE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>compiled.mach-o.executable</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>cocoafob</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2D15DA701CEB6274001F85AE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2D15DA6F1CEB6274001F85AE</string>
+				<string>2DBB60401CEB882700105970</string>
+				<string>2DE01CCD1DAF1CF300F8F4E1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D15DA741CEB6274001F85AE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>2D9128EF1CFFD500009A335D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>-</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.11</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2D15DA751CEB6274001F85AE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>2D9128EF1CFFD500009A335D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>-</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.11</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2D15DA761CEB6274001F85AE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2D15DA771CEB6274001F85AE</string>
+				<string>2D15DA781CEB6274001F85AE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2D15DA771CEB6274001F85AE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8DF6CD1AC4886A99D58B3093</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2D15DA781CEB6274001F85AE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>FCB042591CEF64D8E3ABCFE4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2D29A33E1D9B5170007F3038</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>cocoafob_ctest.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D48F7201D98B92700D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D4AA8C11D708E560021AAB6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7211D98B92700D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DBB60451CEB88D400105970</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7221D98B92700D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DE994DE1CF501CA0078994D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7231D98B92700D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DA699071D77AF19005B14F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7241D98B94000D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DA699031D777518005B14F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7251D98B94000D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D8C37171D6F9A510070093E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7261D98B94000D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DBB60411CEB88BC00105970</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7271D98B94000D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DE994D91CF501A60078994D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7281D98B95E00D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D153B291D73DA7F00B4273D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F7291D98B95E00D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D153B2B1D73DA7F00B4273D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D48F72A1D98B9A000D40E16</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobMain.cpp</string>
+			<key>path</key>
+			<string>../ctest/CFobMain.cpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D48F72B1D98B9A000D40E16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D48F72A1D98B9A000D40E16</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D4AA8C11D708E560021AAB6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFob_ctest_common.cpp</string>
+			<key>path</key>
+			<string>../ctest/CFob_ctest_common.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D4AA8C21D708E560021AAB6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.h</string>
+			<key>name</key>
+			<string>CFob_ctest_common.hpp</string>
+			<key>path</key>
+			<string>../ctest/CFob_ctest_common.hpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D4AA8C41D708FBB0021AAB6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2D4AA8C11D708E560021AAB6</string>
+				<string>2D4AA8C21D708E560021AAB6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>support</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8A225A1DAF203500CE8FB3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>cocoafob_static_debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8A225B1DAF203500CE8FB3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>cocoafob_static_release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8A225C1DAF210300CE8FB3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2D8A225D1DAF211100CE8FB3</string>
+				<string>2D8A225E1DAF211100CE8FB3</string>
+				<string>2D8A225F1DAF211100CE8FB3</string>
+				<string>2D8A22601DAF211100CE8FB3</string>
+				<string>2D8A22611DAF211100CE8FB3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>include</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8A225D1DAF211100CE8FB3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.h</string>
+			<key>name</key>
+			<string>CFobCrypto.hpp</string>
+			<key>path</key>
+			<string>../include/CFobCrypto.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8A225E1DAF211100CE8FB3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.h</string>
+			<key>name</key>
+			<string>CFobDataTypes.hpp</string>
+			<key>path</key>
+			<string>../include/CFobDataTypes.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8A225F1DAF211100CE8FB3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.h</string>
+			<key>name</key>
+			<string>CFobDSAKeyPEM.hpp</string>
+			<key>path</key>
+			<string>../include/CFobDSAKeyPEM.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8A22601DAF211100CE8FB3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.h</string>
+			<key>name</key>
+			<string>CFobLicGenerator.hpp</string>
+			<key>path</key>
+			<string>../include/CFobLicGenerator.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8A22611DAF211100CE8FB3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.h</string>
+			<key>name</key>
+			<string>CFobLicVerifier.hpp</string>
+			<key>path</key>
+			<string>../include/CFobLicVerifier.hpp</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D8AF2DF1DB70D7600AFD89F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DBB60411CEB88BC00105970</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D8AF2E01DB70D7900AFD89F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DE994D91CF501A60078994D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D8AF2E11DB70DF000AFD89F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D153B291D73DA7F00B4273D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D8AF2E21DB70DF000AFD89F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D153B2B1D73DA7F00B4273D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D8C37131D6F98D80070093E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobCrypto.cpp</string>
+			<key>path</key>
+			<string>../source/CFobCrypto.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D8C37151D6F98D80070093E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D8C37131D6F98D80070093E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D8C37171D6F9A510070093E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobInternal.cpp</string>
+			<key>path</key>
+			<string>../source/CFobInternal.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D8C37181D6F9A510070093E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.h</string>
+			<key>name</key>
+			<string>CFobInternal.hpp</string>
+			<key>path</key>
+			<string>../source/CFobInternal.hpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2D8C37191D6F9A510070093E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D8C37171D6F9A510070093E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D8C371B1D6F9BBB0070093E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2DA699031D777518005B14F0</string>
+				<string>2D8C37131D6F98D80070093E</string>
+				<string>2D8C37171D6F9A510070093E</string>
+				<string>2D8C37181D6F9A510070093E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>support</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D9128EF1CFFD500009A335D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>cocoafob.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D9128F01CFFD504009A335D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2D8A225A1DAF203500CE8FB3</string>
+				<string>2D8A225B1DAF203500CE8FB3</string>
+				<string>2D29A33E1D9B5170007F3038</string>
+				<string>2D9128EF1CFFD500009A335D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2DA699031D777518005B14F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobDSAKeyPEM.cpp</string>
+			<key>path</key>
+			<string>../source/CFobDSAKeyPEM.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2DA699051D777518005B14F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DA699031D777518005B14F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2DA699071D77AF19005B14F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobDSAKeyPEM_ctest.cpp</string>
+			<key>path</key>
+			<string>../ctest/CFobDSAKeyPEM_ctest.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2DA6990B1D77C10A005B14F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DBB60411CEB88BC00105970</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2DAEE02F1DC96ECD00CFE16F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DA699031D777518005B14F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2DAEE0301DC96ED200CFE16F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D8C37131D6F98D80070093E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2DAEE0311DC96ED700CFE16F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2D8C37171D6F9A510070093E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2DBB60371CEB882700105970</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2DBB603D1CEB882700105970</string>
+			<key>buildPhases</key>
+			<array>
+				<string>CC4103571190322D4C6568B5</string>
+				<string>2DBB60381CEB882700105970</string>
+				<string>2DBB603B1CEB882700105970</string>
+				<string>2DC375A01D6FDDCF005A486F</string>
+				<string>9DD6AA011D3912CBC0E5F3EF</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>cocoafob_ctest</string>
+			<key>productName</key>
+			<string>cocoafob</string>
+			<key>productReference</key>
+			<string>2DBB60401CEB882700105970</string>
+			<key>productType</key>
+			<string>com.apple.product-type.tool</string>
+		</dict>
+		<key>2DBB60381CEB882700105970</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2D48F7251D98B94000D40E16</string>
+				<string>2D48F7261D98B94000D40E16</string>
+				<string>2D48F7291D98B95E00D40E16</string>
+				<string>2D48F7241D98B94000D40E16</string>
+				<string>2D157AE41D98B6E400DA7608</string>
+				<string>2D48F7281D98B95E00D40E16</string>
+				<string>2D48F7201D98B92700D40E16</string>
+				<string>2D48F7211D98B92700D40E16</string>
+				<string>2D48F7271D98B94000D40E16</string>
+				<string>2D48F7221D98B92700D40E16</string>
+				<string>2D157AE51D98B7A400DA7608</string>
+				<string>2D48F72B1D98B9A000D40E16</string>
+				<string>2D48F7231D98B92700D40E16</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2DBB603B1CEB882700105970</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>016CBE8D86C81824D72A70DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2DBB603D1CEB882700105970</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2DBB603E1CEB882700105970</string>
+				<string>2DBB603F1CEB882700105970</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2DBB603E1CEB882700105970</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>2D29A33E1D9B5170007F3038</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>GCC_GENERATE_TEST_COVERAGE_FILES</key>
+				<string>YES</string>
+				<key>GCC_INSTRUMENT_PROGRAM_FLOW_ARCS</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2DBB603F1CEB882700105970</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>2D29A33E1D9B5170007F3038</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>GCC_GENERATE_TEST_COVERAGE_FILES</key>
+				<string>YES</string>
+				<key>GCC_INSTRUMENT_PROGRAM_FLOW_ARCS</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2DBB60401CEB882700105970</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>compiled.mach-o.executable</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>cocoafob_ctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2DBB60411CEB88BC00105970</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobLicGenerator.cpp</string>
+			<key>path</key>
+			<string>../source/CFobLicGenerator.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2DBB60451CEB88D400105970</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobLicGenerator_ctest.cpp</string>
+			<key>path</key>
+			<string>../ctest/CFobLicGenerator_ctest.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2DC375A01D6FDDCF005A486F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Run Script - XcodeCoverage</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>set -e
+set -u
 
-/* Begin PBXBuildFile section */
-		2D153B2D1D73DA7F00B4273D /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B291D73DA7F00B4273D /* decoder.c */; };
-		2D153B2F1D73DA7F00B4273D /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B2B1D73DA7F00B4273D /* encoder.c */; };
-		2D157AE41D98B6E400DA7608 /* CFobCrypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C37131D6F98D80070093E /* CFobCrypto.cpp */; };
-		2D157AE51D98B7A400DA7608 /* CFobCrypto_ctest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DC375A11D6FDFE3005A486F /* CFobCrypto_ctest.cpp */; };
-		2D48F7201D98B92700D40E16 /* CFob_ctest_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AA8C11D708E560021AAB6 /* CFob_ctest_common.cpp */; };
-		2D48F7211D98B92700D40E16 /* CFobLicGenerator_ctest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB60451CEB88D400105970 /* CFobLicGenerator_ctest.cpp */; };
-		2D48F7221D98B92700D40E16 /* CFobLicVerifier_ctest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DE994DE1CF501CA0078994D /* CFobLicVerifier_ctest.cpp */; };
-		2D48F7231D98B92700D40E16 /* CFobDSAKeyPEM_ctest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699071D77AF19005B14F0 /* CFobDSAKeyPEM_ctest.cpp */; };
-		2D48F7241D98B94000D40E16 /* CFobDSAKeyPEM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699031D777518005B14F0 /* CFobDSAKeyPEM.cpp */; };
-		2D48F7251D98B94000D40E16 /* CFobInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C37171D6F9A510070093E /* CFobInternal.cpp */; };
-		2D48F7261D98B94000D40E16 /* CFobLicGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */; };
-		2D48F7271D98B94000D40E16 /* CFobLicVerifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */; };
-		2D48F7281D98B95E00D40E16 /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B291D73DA7F00B4273D /* decoder.c */; };
-		2D48F7291D98B95E00D40E16 /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B2B1D73DA7F00B4273D /* encoder.c */; };
-		2D48F72B1D98B9A000D40E16 /* CFobMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D48F72A1D98B9A000D40E16 /* CFobMain.cpp */; };
-		2D8AF2DF1DB70D7600AFD89F /* CFobLicGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */; };
-		2D8AF2E01DB70D7900AFD89F /* CFobLicVerifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */; };
-		2D8AF2E11DB70DF000AFD89F /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B291D73DA7F00B4273D /* decoder.c */; };
-		2D8AF2E21DB70DF000AFD89F /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B2B1D73DA7F00B4273D /* encoder.c */; };
-		2D8C37151D6F98D80070093E /* CFobCrypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C37131D6F98D80070093E /* CFobCrypto.cpp */; };
-		2D8C37191D6F9A510070093E /* CFobInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C37171D6F9A510070093E /* CFobInternal.cpp */; };
-		2DA699051D777518005B14F0 /* CFobDSAKeyPEM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699031D777518005B14F0 /* CFobDSAKeyPEM.cpp */; };
-		2DA6990B1D77C10A005B14F0 /* CFobLicGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */; };
-		2DAEE02F1DC96ECD00CFE16F /* CFobDSAKeyPEM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA699031D777518005B14F0 /* CFobDSAKeyPEM.cpp */; };
-		2DAEE0301DC96ED200CFE16F /* CFobCrypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C37131D6F98D80070093E /* CFobCrypto.cpp */; };
-		2DAEE0311DC96ED700CFE16F /* CFobInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C37171D6F9A510070093E /* CFobInternal.cpp */; };
-		2DE994DB1CF501A60078994D /* CFobLicVerifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */; };
-/* End PBXBuildFile section */
+CURRENT_PATH=$PWD
+if [[ -d components/XcodeCoverage ]]; then
+    cd components/XcodeCoverage
+    ./cleancov
+    ./exportenv.sh
+fi
 
-/* Begin PBXCopyFilesBuildPhase section */
-		2D15DA6D1CEB6274001F85AE /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
-/* Begin PBXFileReference section */
-		2D153B291D73DA7F00B4273D /* decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decoder.c; path = ../source/base32/decoder.c; sourceTree = SOURCE_ROOT; };
-		2D153B2A1D73DA7F00B4273D /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decoder.h; path = ../source/base32/decoder.h; sourceTree = SOURCE_ROOT; };
-		2D153B2B1D73DA7F00B4273D /* encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encoder.c; path = ../source/base32/encoder.c; sourceTree = SOURCE_ROOT; };
-		2D153B2C1D73DA7F00B4273D /* encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = encoder.h; path = ../source/base32/encoder.h; sourceTree = SOURCE_ROOT; };
-		2D15DA6F1CEB6274001F85AE /* cocoafob */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cocoafob; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D29A33E1D9B5170007F3038 /* cocoafob_ctest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = cocoafob_ctest.xcconfig; sourceTree = "<group>"; };
-		2D48F72A1D98B9A000D40E16 /* CFobMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobMain.cpp; path = ../ctest/CFobMain.cpp; sourceTree = "<group>"; };
-		2D4AA8C11D708E560021AAB6 /* CFob_ctest_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFob_ctest_common.cpp; path = ../ctest/CFob_ctest_common.cpp; sourceTree = SOURCE_ROOT; };
-		2D4AA8C21D708E560021AAB6 /* CFob_ctest_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFob_ctest_common.hpp; path = ../ctest/CFob_ctest_common.hpp; sourceTree = SOURCE_ROOT; };
-		2D8A225A1DAF203500CE8FB3 /* cocoafob_static_debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = cocoafob_static_debug.xcconfig; sourceTree = "<group>"; };
-		2D8A225B1DAF203500CE8FB3 /* cocoafob_static_release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = cocoafob_static_release.xcconfig; sourceTree = "<group>"; };
-		2D8A225D1DAF211100CE8FB3 /* CFobCrypto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobCrypto.hpp; path = ../include/CFobCrypto.hpp; sourceTree = "<group>"; };
-		2D8A225E1DAF211100CE8FB3 /* CFobDataTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobDataTypes.hpp; path = ../include/CFobDataTypes.hpp; sourceTree = "<group>"; };
-		2D8A225F1DAF211100CE8FB3 /* CFobDSAKeyPEM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobDSAKeyPEM.hpp; path = ../include/CFobDSAKeyPEM.hpp; sourceTree = "<group>"; };
-		2D8A22601DAF211100CE8FB3 /* CFobLicGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobLicGenerator.hpp; path = ../include/CFobLicGenerator.hpp; sourceTree = "<group>"; };
-		2D8A22611DAF211100CE8FB3 /* CFobLicVerifier.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobLicVerifier.hpp; path = ../include/CFobLicVerifier.hpp; sourceTree = "<group>"; };
-		2D8C37131D6F98D80070093E /* CFobCrypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobCrypto.cpp; path = ../source/CFobCrypto.cpp; sourceTree = SOURCE_ROOT; };
-		2D8C37171D6F9A510070093E /* CFobInternal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobInternal.cpp; path = ../source/CFobInternal.cpp; sourceTree = SOURCE_ROOT; };
-		2D8C37181D6F9A510070093E /* CFobInternal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CFobInternal.hpp; path = ../source/CFobInternal.hpp; sourceTree = SOURCE_ROOT; };
-		2D9128EF1CFFD500009A335D /* cocoafob.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = cocoafob.xcconfig; sourceTree = "<group>"; };
-		2DA699031D777518005B14F0 /* CFobDSAKeyPEM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobDSAKeyPEM.cpp; path = ../source/CFobDSAKeyPEM.cpp; sourceTree = SOURCE_ROOT; };
-		2DA699071D77AF19005B14F0 /* CFobDSAKeyPEM_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobDSAKeyPEM_ctest.cpp; path = ../ctest/CFobDSAKeyPEM_ctest.cpp; sourceTree = SOURCE_ROOT; };
-		2DBB60401CEB882700105970 /* cocoafob_ctest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cocoafob_ctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicGenerator.cpp; path = ../source/CFobLicGenerator.cpp; sourceTree = SOURCE_ROOT; };
-		2DBB60451CEB88D400105970 /* CFobLicGenerator_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicGenerator_ctest.cpp; path = ../ctest/CFobLicGenerator_ctest.cpp; sourceTree = SOURCE_ROOT; };
-		2DC375A11D6FDFE3005A486F /* CFobCrypto_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobCrypto_ctest.cpp; path = ../ctest/CFobCrypto_ctest.cpp; sourceTree = SOURCE_ROOT; };
-		2DD05FC71CEB62E300214ECE /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
-		2DE01CCD1DAF1CF300F8F4E1 /* libcocoafob_sd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcocoafob_sd.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicVerifier.cpp; path = ../source/CFobLicVerifier.cpp; sourceTree = SOURCE_ROOT; };
-		2DE994DE1CF501CA0078994D /* CFobLicVerifier_ctest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFobLicVerifier_ctest.cpp; path = ../ctest/CFobLicVerifier_ctest.cpp; sourceTree = SOURCE_ROOT; };
-		2DEFBE691D6FB77200F211B1 /* download_required_libs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = download_required_libs.sh; path = ../download_required_libs.sh; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		2D15DA6C1CEB6274001F85AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DBB603B1CEB882700105970 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DE01CCA1DAF1CF300F8F4E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		2D153B201D73D9D800B4273D /* base32 */ = {
-			isa = PBXGroup;
-			children = (
-				2D153B291D73DA7F00B4273D /* decoder.c */,
-				2D153B2A1D73DA7F00B4273D /* decoder.h */,
-				2D153B2B1D73DA7F00B4273D /* encoder.c */,
-				2D153B2C1D73DA7F00B4273D /* encoder.h */,
-			);
-			name = base32;
-			sourceTree = "<group>";
-		};
-		2D15DA661CEB6273001F85AE = {
-			isa = PBXGroup;
-			children = (
-				2DD05FC71CEB62E300214ECE /* README.markdown */,
-				2DEFBE681D6FB76800F211B1 /* script */,
-				2D9128F01CFFD504009A335D /* xcconfig */,
-				2DE994DD1CF501AC0078994D /* source */,
-				2DD05FC91CEB636000214ECE /* unittest */,
-				2D15DA701CEB6274001F85AE /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		2D15DA701CEB6274001F85AE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2D15DA6F1CEB6274001F85AE /* cocoafob */,
-				2DBB60401CEB882700105970 /* cocoafob_ctest */,
-				2DE01CCD1DAF1CF300F8F4E1 /* libcocoafob_sd.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2D4AA8C41D708FBB0021AAB6 /* support */ = {
-			isa = PBXGroup;
-			children = (
-				2D4AA8C11D708E560021AAB6 /* CFob_ctest_common.cpp */,
-				2D4AA8C21D708E560021AAB6 /* CFob_ctest_common.hpp */,
-			);
-			name = support;
-			sourceTree = "<group>";
-		};
-		2D8A225C1DAF210300CE8FB3 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				2D8A225D1DAF211100CE8FB3 /* CFobCrypto.hpp */,
-				2D8A225E1DAF211100CE8FB3 /* CFobDataTypes.hpp */,
-				2D8A225F1DAF211100CE8FB3 /* CFobDSAKeyPEM.hpp */,
-				2D8A22601DAF211100CE8FB3 /* CFobLicGenerator.hpp */,
-				2D8A22611DAF211100CE8FB3 /* CFobLicVerifier.hpp */,
-			);
-			name = include;
-			sourceTree = "<group>";
-		};
-		2D8C371B1D6F9BBB0070093E /* support */ = {
-			isa = PBXGroup;
-			children = (
-				2DA699031D777518005B14F0 /* CFobDSAKeyPEM.cpp */,
-				2D8C37131D6F98D80070093E /* CFobCrypto.cpp */,
-				2D8C37171D6F9A510070093E /* CFobInternal.cpp */,
-				2D8C37181D6F9A510070093E /* CFobInternal.hpp */,
-			);
-			name = support;
-			sourceTree = "<group>";
-		};
-		2D9128F01CFFD504009A335D /* xcconfig */ = {
-			isa = PBXGroup;
-			children = (
-				2D8A225A1DAF203500CE8FB3 /* cocoafob_static_debug.xcconfig */,
-				2D8A225B1DAF203500CE8FB3 /* cocoafob_static_release.xcconfig */,
-				2D29A33E1D9B5170007F3038 /* cocoafob_ctest.xcconfig */,
-				2D9128EF1CFFD500009A335D /* cocoafob.xcconfig */,
-			);
-			name = xcconfig;
-			sourceTree = "<group>";
-		};
-		2DD05FC91CEB636000214ECE /* unittest */ = {
-			isa = PBXGroup;
-			children = (
-				2D4AA8C41D708FBB0021AAB6 /* support */,
-				2DBB60451CEB88D400105970 /* CFobLicGenerator_ctest.cpp */,
-				2DE994DE1CF501CA0078994D /* CFobLicVerifier_ctest.cpp */,
-				2DC375A11D6FDFE3005A486F /* CFobCrypto_ctest.cpp */,
-				2DA699071D77AF19005B14F0 /* CFobDSAKeyPEM_ctest.cpp */,
-				2D48F72A1D98B9A000D40E16 /* CFobMain.cpp */,
-			);
-			name = unittest;
-			sourceTree = "<group>";
-		};
-		2DE994DD1CF501AC0078994D /* source */ = {
-			isa = PBXGroup;
-			children = (
-				2D8A225C1DAF210300CE8FB3 /* include */,
-				2D153B201D73D9D800B4273D /* base32 */,
-				2D8C371B1D6F9BBB0070093E /* support */,
-				2DBB60411CEB88BC00105970 /* CFobLicGenerator.cpp */,
-				2DE994D91CF501A60078994D /* CFobLicVerifier.cpp */,
-			);
-			name = source;
-			sourceTree = "<group>";
-		};
-		2DEFBE681D6FB76800F211B1 /* script */ = {
-			isa = PBXGroup;
-			children = (
-				2DEFBE691D6FB77200F211B1 /* download_required_libs.sh */,
-			);
-			name = script;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		2DE01CCB1DAF1CF300F8F4E1 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		2D15DA6E1CEB6274001F85AE /* cocoafob */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D15DA761CEB6274001F85AE /* Build configuration list for PBXNativeTarget "cocoafob" */;
-			buildPhases = (
-				2D15DA6B1CEB6274001F85AE /* Sources */,
-				2D15DA6C1CEB6274001F85AE /* Frameworks */,
-				2D15DA6D1CEB6274001F85AE /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = cocoafob;
-			productName = cocoafob;
-			productReference = 2D15DA6F1CEB6274001F85AE /* cocoafob */;
-			productType = "com.apple.product-type.tool";
-		};
-		2DBB60371CEB882700105970 /* cocoafob_ctest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2DBB603D1CEB882700105970 /* Build configuration list for PBXNativeTarget "cocoafob_ctest" */;
-			buildPhases = (
-				2DBB60381CEB882700105970 /* Sources */,
-				2DBB603B1CEB882700105970 /* Frameworks */,
-				2DC375A01D6FDDCF005A486F /* Run Script - XcodeCoverage */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = cocoafob_ctest;
-			productName = cocoafob;
-			productReference = 2DBB60401CEB882700105970 /* cocoafob_ctest */;
-			productType = "com.apple.product-type.tool";
-		};
-		2DE01CCC1DAF1CF300F8F4E1 /* static lib */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2DE01CD71DAF1CF300F8F4E1 /* Build configuration list for PBXNativeTarget "static lib" */;
-			buildPhases = (
-				2DE01CC91DAF1CF300F8F4E1 /* Sources */,
-				2DE01CCA1DAF1CF300F8F4E1 /* Frameworks */,
-				2DE01CCB1DAF1CF300F8F4E1 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "static lib";
-			productName = "static lib";
-			productReference = 2DE01CCD1DAF1CF300F8F4E1 /* libcocoafob_sd.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		2D15DA671CEB6273001F85AE /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Jaime O. Rios";
-				TargetAttributes = {
-					2D15DA6E1CEB6274001F85AE = {
-						CreatedOnToolsVersion = 7.3;
-					};
-					2DE01CCC1DAF1CF300F8F4E1 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 6Y9B2NECZ9;
-						ProvisioningStyle = Automatic;
-					};
-				};
-			};
-			buildConfigurationList = 2D15DA6A1CEB6274001F85AE /* Build configuration list for PBXProject "cocoafob" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 2D15DA661CEB6273001F85AE;
-			productRefGroup = 2D15DA701CEB6274001F85AE /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				2D15DA6E1CEB6274001F85AE /* cocoafob */,
-				2DBB60371CEB882700105970 /* cocoafob_ctest */,
-				2DE01CCC1DAF1CF300F8F4E1 /* static lib */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2DC375A01D6FDDCF005A486F /* Run Script - XcodeCoverage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script - XcodeCoverage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\n\nCURRENT_PATH=$PWD\nif [[ -d components/XcodeCoverage ]]; then\n    cd components/XcodeCoverage\n    ./cleancov\n    ./exportenv.sh\nfi\n\ncd $CURRENT_PATH";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		2D15DA6B1CEB6274001F85AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2DA699051D777518005B14F0 /* CFobDSAKeyPEM.cpp in Sources */,
-				2D153B2D1D73DA7F00B4273D /* decoder.c in Sources */,
-				2DE994DB1CF501A60078994D /* CFobLicVerifier.cpp in Sources */,
-				2DA6990B1D77C10A005B14F0 /* CFobLicGenerator.cpp in Sources */,
-				2D153B2F1D73DA7F00B4273D /* encoder.c in Sources */,
-				2D8C37151D6F98D80070093E /* CFobCrypto.cpp in Sources */,
-				2D8C37191D6F9A510070093E /* CFobInternal.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DBB60381CEB882700105970 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D48F7251D98B94000D40E16 /* CFobInternal.cpp in Sources */,
-				2D48F7261D98B94000D40E16 /* CFobLicGenerator.cpp in Sources */,
-				2D48F7291D98B95E00D40E16 /* encoder.c in Sources */,
-				2D48F7241D98B94000D40E16 /* CFobDSAKeyPEM.cpp in Sources */,
-				2D157AE41D98B6E400DA7608 /* CFobCrypto.cpp in Sources */,
-				2D48F7281D98B95E00D40E16 /* decoder.c in Sources */,
-				2D48F7201D98B92700D40E16 /* CFob_ctest_common.cpp in Sources */,
-				2D48F7211D98B92700D40E16 /* CFobLicGenerator_ctest.cpp in Sources */,
-				2D48F7271D98B94000D40E16 /* CFobLicVerifier.cpp in Sources */,
-				2D48F7221D98B92700D40E16 /* CFobLicVerifier_ctest.cpp in Sources */,
-				2D157AE51D98B7A400DA7608 /* CFobCrypto_ctest.cpp in Sources */,
-				2D48F72B1D98B9A000D40E16 /* CFobMain.cpp in Sources */,
-				2D48F7231D98B92700D40E16 /* CFobDSAKeyPEM_ctest.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DE01CC91DAF1CF300F8F4E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2DAEE0301DC96ED200CFE16F /* CFobCrypto.cpp in Sources */,
-				2D8AF2E01DB70D7900AFD89F /* CFobLicVerifier.cpp in Sources */,
-				2D8AF2E11DB70DF000AFD89F /* decoder.c in Sources */,
-				2DAEE0311DC96ED700CFE16F /* CFobInternal.cpp in Sources */,
-				2DAEE02F1DC96ECD00CFE16F /* CFobDSAKeyPEM.cpp in Sources */,
-				2D8AF2E21DB70DF000AFD89F /* encoder.c in Sources */,
-				2D8AF2DF1DB70D7600AFD89F /* CFobLicGenerator.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin XCBuildConfiguration section */
-		2D15DA741CEB6274001F85AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D9128EF1CFFD500009A335D /* cocoafob.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		2D15DA751CEB6274001F85AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D9128EF1CFFD500009A335D /* cocoafob.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		2D15DA771CEB6274001F85AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		2D15DA781CEB6274001F85AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		2DBB603E1CEB882700105970 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D29A33E1D9B5170007F3038 /* cocoafob_ctest.xcconfig */;
-			buildSettings = {
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		2DBB603F1CEB882700105970 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D29A33E1D9B5170007F3038 /* cocoafob_ctest.xcconfig */;
-			buildSettings = {
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		2DE01CD51DAF1CF300F8F4E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D8A225A1DAF203500CE8FB3 /* cocoafob_static_debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = 6Y9B2NECZ9;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-			};
-			name = Debug;
-		};
-		2DE01CD61DAF1CF300F8F4E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D8A225B1DAF203500CE8FB3 /* cocoafob_static_release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = 6Y9B2NECZ9;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		2D15DA6A1CEB6274001F85AE /* Build configuration list for PBXProject "cocoafob" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D15DA741CEB6274001F85AE /* Debug */,
-				2D15DA751CEB6274001F85AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D15DA761CEB6274001F85AE /* Build configuration list for PBXNativeTarget "cocoafob" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D15DA771CEB6274001F85AE /* Debug */,
-				2D15DA781CEB6274001F85AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2DBB603D1CEB882700105970 /* Build configuration list for PBXNativeTarget "cocoafob_ctest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2DBB603E1CEB882700105970 /* Debug */,
-				2DBB603F1CEB882700105970 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2DE01CD71DAF1CF300F8F4E1 /* Build configuration list for PBXNativeTarget "static lib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2DE01CD51DAF1CF300F8F4E1 /* Debug */,
-				2DE01CD61DAF1CF300F8F4E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 2D15DA671CEB6273001F85AE /* Project object */;
-}
+cd $CURRENT_PATH</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>2DC375A11D6FDFE3005A486F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobCrypto_ctest.cpp</string>
+			<key>path</key>
+			<string>../ctest/CFobCrypto_ctest.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2DD05FC71CEB62E300214ECE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>net.daringfireball.markdown</string>
+			<key>name</key>
+			<string>README.markdown</string>
+			<key>path</key>
+			<string>../README.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2DD05FC91CEB636000214ECE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2D4AA8C41D708FBB0021AAB6</string>
+				<string>2DBB60451CEB88D400105970</string>
+				<string>2DE994DE1CF501CA0078994D</string>
+				<string>2DC375A11D6FDFE3005A486F</string>
+				<string>2DA699071D77AF19005B14F0</string>
+				<string>2D48F72A1D98B9A000D40E16</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>unittest</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2DE01CC91DAF1CF300F8F4E1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2DAEE0301DC96ED200CFE16F</string>
+				<string>2D8AF2E01DB70D7900AFD89F</string>
+				<string>2D8AF2E11DB70DF000AFD89F</string>
+				<string>2DAEE0311DC96ED700CFE16F</string>
+				<string>2DAEE02F1DC96ECD00CFE16F</string>
+				<string>2D8AF2E21DB70DF000AFD89F</string>
+				<string>2D8AF2DF1DB70D7600AFD89F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2DE01CCA1DAF1CF300F8F4E1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B318ECE3654E10928E304BE3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2DE01CCB1DAF1CF300F8F4E1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2DE01CCC1DAF1CF300F8F4E1</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2DE01CD71DAF1CF300F8F4E1</string>
+			<key>buildPhases</key>
+			<array>
+				<string>878195B96D0F75C5BB0DA69E</string>
+				<string>2DE01CC91DAF1CF300F8F4E1</string>
+				<string>2DE01CCA1DAF1CF300F8F4E1</string>
+				<string>2DE01CCB1DAF1CF300F8F4E1</string>
+				<string>437A5F3F03E3B0AF0FAF4A55</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>static lib</string>
+			<key>productName</key>
+			<string>static lib</string>
+			<key>productReference</key>
+			<string>2DE01CCD1DAF1CF300F8F4E1</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>2DE01CCD1DAF1CF300F8F4E1</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libcocoafob_sd.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2DE01CD51DAF1CF300F8F4E1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>2D8A225A1DAF203500CE8FB3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_32_64_BIT)</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
+				<string>YES</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>6Y9B2NECZ9</string>
+				<key>EXECUTABLE_PREFIX</key>
+				<string>lib</string>
+				<key>GCC_ENABLE_CPP_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_ENABLE_CPP_RTTI</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2DE01CD61DAF1CF300F8F4E1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>2D8A225B1DAF203500CE8FB3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_32_64_BIT)</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
+				<string>YES</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>6Y9B2NECZ9</string>
+				<key>EXECUTABLE_PREFIX</key>
+				<string>lib</string>
+				<key>GCC_ENABLE_CPP_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_ENABLE_CPP_RTTI</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2DE01CD71DAF1CF300F8F4E1</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2DE01CD51DAF1CF300F8F4E1</string>
+				<string>2DE01CD61DAF1CF300F8F4E1</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2DE994D91CF501A60078994D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobLicVerifier.cpp</string>
+			<key>path</key>
+			<string>../source/CFobLicVerifier.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2DE994DB1CF501A60078994D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2DE994D91CF501A60078994D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2DE994DD1CF501AC0078994D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2D8A225C1DAF210300CE8FB3</string>
+				<string>2D153B201D73D9D800B4273D</string>
+				<string>2D8C371B1D6F9BBB0070093E</string>
+				<string>2DBB60411CEB88BC00105970</string>
+				<string>2DE994D91CF501A60078994D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>source</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2DE994DE1CF501CA0078994D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.cpp.cpp</string>
+			<key>name</key>
+			<string>CFobLicVerifier_ctest.cpp</string>
+			<key>path</key>
+			<string>../ctest/CFobLicVerifier_ctest.cpp</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2DE99DDA1EF2150000B31202</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Podfile</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2DEFBE681D6FB76800F211B1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2DEFBE691D6FB77200F211B1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>script</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2DEFBE691D6FB77200F211B1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>name</key>
+			<string>download_required_libs.sh</string>
+			<key>path</key>
+			<string>../download_required_libs.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>312D82E6C8E4B7CF5A338E34</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-static lib.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>437A5F3F03E3B0AF0FAF4A55</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-static lib/Pods-static lib-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>5415CF9662B599D5706414B7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>5CBEFE7613A815436E64ECFA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-cocoafob.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>878195B96D0F75C5BB0DA69E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>8DF6CD1AC4886A99D58B3093</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-cocoafob.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-cocoafob/Pods-cocoafob.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DD6AA011D3912CBC0E5F3EF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob_ctest/Pods-cocoafob_ctest-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B176D9166CA638BB4036B676</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-cocoafob_ctest.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B318ECE3654E10928E304BE3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>312D82E6C8E4B7CF5A338E34</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CC4103571190322D4C6568B5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>CD878788F4975A101F202AF7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob/Pods-cocoafob-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>E2283F2AA551C158B6C0F5F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5CBEFE7613A815436E64ECFA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E86EF07F2BC7C86A7158614C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8DF6CD1AC4886A99D58B3093</string>
+				<string>FCB042591CEF64D8E3ABCFE4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FCB042591CEF64D8E3ABCFE4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-cocoafob.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-cocoafob/Pods-cocoafob.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>2D15DA671CEB6273001F85AE</string>
+</dict>
+</plist>
