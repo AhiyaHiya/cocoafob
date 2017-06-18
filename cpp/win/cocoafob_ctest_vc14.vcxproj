@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\source\base32\decoder.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -156,6 +157,7 @@
     <ClCompile Include="..\ctest\CFobLicVerifier_ctest.cpp" />
     <ClCompile Include="..\ctest\CFobMain.cpp" />
     <ClCompile Include="..\ctest\CFob_ctest_common.cpp" />
+    <ClCompile Include="..\source\CFobCrypto.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
