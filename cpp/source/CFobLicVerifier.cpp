@@ -40,12 +40,12 @@ auto CFobLicVerifier::VerifyRegCodeForName(const std::string regCode,
 {
     if (regCode.length() == 0)
     {
-        return {false, "Empty regCode string detected"s};
+        return std::make_tuple(false, "Empty regCode string detected"s);
     }
 
     if (forName.length() == 0)
     {
-        return {false, "Empty name string detected"s};
+        return std::make_tuple(false, "Empty name string detected"s);
     }
 
     const auto strippedRegCode = CFob::Internal::StripFormattingFromBase32EncodedString(regCode);
