@@ -14,18 +14,23 @@ Note: CocoaPods is used for managing the external libraries required by the Xcod
 
 ## Requirements
 ### macOS
-
-* CocoaPod for macOS (https://guides.cocoapods.org/using/getting-started.html)
-* 'pod install' must be run prior to opening Xcode project
+* CocoaPods package manager (https://guides.cocoapods.org/using/getting-started.html)
+* "pod install" in project directory must be run first to have xcconfig file generated with lib search paths
 * cocoafob.xcworkspace must be opened to get access to 
 * Catch C++ Unit Testing Header (Handled by download shell script)
 * OpenSSL 1_0_2 stable release (Handled by CocoaPods)
 
 ### Windows
-* Conan.io for Windows (http://docs.conan.io/en/latest/installation.html)
-** "conan install" in project directory must be run in order to get vsprops file with search directories
-* Catch C++ Unit Testing Header (Handled by Conan)
-* OpenSSL 1_0_2 stable release (Handled by Conan)
+* Conan.io package manager (http://docs.conan.io/en/latest/installation.html)
+* "conan install" in project directory must be run in order to get vsprops file with search directories
 
 ### Download script
-A bash shell script named download_required_libs.sh is in the same directory as this README file and can be used for downloading the Catch from source and places the headers in the components directory.
+(macOS only) A bash shell script named download_required_libs.sh is in the same directory as this README file and is used by the Xcode project for downloading the Catch from source and places the headers in the components directory.
+
+
+### Managed Libs
+* OpenSSL 1_0_2 stable release
+* ZLIB 1.2.8
+
+### Managed Header
+* (Windows only) Conan is used to download Catch C++ header
