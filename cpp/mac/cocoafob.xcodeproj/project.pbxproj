@@ -386,7 +386,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-static lib/Pods-static lib-resources.sh\"\n";
+			shellScript = "set -e\n\n\"${SRCROOT}/../download_required_libs.sh\"\n\n\"${SRCROOT}/Pods/Target Support Files/Pods-static lib/Pods-static lib-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5415CF9662B599D5706414B7 /* [CP] Check Pods Manifest.lock */ = {
@@ -431,7 +431,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob_ctest/Pods-cocoafob_ctest-resources.sh\"\n";
+			shellScript = "set -e\n\n\"${SRCROOT}/../download_required_libs.sh\"\n\n\"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob_ctest/Pods-cocoafob_ctest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC4103571190322D4C6568B5 /* [CP] Check Pods Manifest.lock */ = {
@@ -461,7 +461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob/Pods-cocoafob-resources.sh\"\n";
+			shellScript = "set -e\n\n\"${SRCROOT}/../download_required_libs.sh\"\n\n\"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob/Pods-cocoafob-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -645,6 +645,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				ONLY_ACTIVE_ARCH = NO;
 			};
 			name = Debug;
 		};
