@@ -13,12 +13,12 @@ Xcode and Visual Studio projects are provided for this port.
 ## Requirements
 ### macOS
 * CocoaPods package manager (https://guides.cocoapods.org/using/getting-started.html)
-** "pod install" in project directory must be run first to have xcconfig file generated with lib search paths
+* "pod install" in project directory must be run first to have xcconfig file generated with lib search paths
 * cocoafob.xcworkspace must be opened to get access to 
 
 ### Windows
 * Conan.io package manager (http://docs.conan.io/en/latest/installation.html)
-** "conan install" in project directory must be run in order to get vsprops file with search directories
+* "conan install" in project directory must be run in order to get vsprops file with search directories
 
 
 ## Notes
@@ -27,9 +27,8 @@ Xcode and Visual Studio projects are provided for this port.
 
 
 ### Managed Libs
-Managed by package managers:
 * OpenSSL 1_0_2 stable release
 * ZLIB 1.2.8
 
 ### Managed Header
-For Windows project, Conan is used to download Catch C++ header.
+* (Windows only) Conan is used to download Catch C++ header
