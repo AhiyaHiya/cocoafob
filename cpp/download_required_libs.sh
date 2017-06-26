@@ -1,4 +1,8 @@
 #!/bin/bash
+# Catch C++ is a header only implementation of unit-testing
+# for C++ projects, which is used by this project.
+
+# The cocoafob.xcodeproj will invoke this script when building the project
 
 set -o errexit
 
