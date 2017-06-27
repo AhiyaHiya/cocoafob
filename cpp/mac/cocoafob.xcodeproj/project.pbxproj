@@ -287,6 +287,7 @@
 			buildConfigurationList = 2DBB603D1CEB882700105970 /* Build configuration list for PBXNativeTarget "cocoafob_ctest" */;
 			buildPhases = (
 				CC4103571190322D4C6568B5 /* [CP] Check Pods Manifest.lock */,
+				2D7E28801F01D5CE000C973A /* Download catch c++ header */,
 				2DBB60381CEB882700105970 /* Sources */,
 				2DBB603B1CEB882700105970 /* Frameworks */,
 				2DC375A01D6FDDCF005A486F /* Run Script - XcodeCoverage */,
@@ -359,6 +360,21 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D7E28801F01D5CE000C973A /* Download catch c++ header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Download catch c++ header";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -o errexit\n\n\"${PROJECT_DIR}/../download_required_libs.sh\"";
+			showEnvVarsInLog = 0;
+		};
 		2DC375A01D6FDDCF005A486F /* Run Script - XcodeCoverage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,7 +402,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\n\"${SRCROOT}/../download_required_libs.sh\"\n\n\"${SRCROOT}/Pods/Target Support Files/Pods-static lib/Pods-static lib-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-static lib/Pods-static lib-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5415CF9662B599D5706414B7 /* [CP] Check Pods Manifest.lock */ = {
@@ -431,7 +447,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\n\"${SRCROOT}/../download_required_libs.sh\"\n\n\"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob_ctest/Pods-cocoafob_ctest-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob_ctest/Pods-cocoafob_ctest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC4103571190322D4C6568B5 /* [CP] Check Pods Manifest.lock */ = {
@@ -446,7 +462,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eu\n\necho \"PODS_ROOT: ${PODS_ROOT}\"\n\ndiff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CD878788F4975A101F202AF7 /* [CP] Copy Pods Resources */ = {
@@ -461,7 +477,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\n\"${SRCROOT}/../download_required_libs.sh\"\n\n\"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob/Pods-cocoafob-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cocoafob/Pods-cocoafob-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
