@@ -32,6 +32,6 @@ main()
     printf "Download and install operation complete\n"
 }
 
-CFOB_CURRENT_PATH=$PWD
+CFOB_CURRENT_PATH=$PROJECT_DIR/..
 
 main

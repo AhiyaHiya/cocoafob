@@ -290,7 +290,7 @@
 				2D7E28801F01D5CE000C973A /* Download catch c++ header */,
 				2DBB60381CEB882700105970 /* Sources */,
 				2DBB603B1CEB882700105970 /* Frameworks */,
-				2DC375A01D6FDDCF005A486F /* Run Script - XcodeCoverage */,
+				2DC375A01D6FDDCF005A486F /* XcodeCoverage */,
 				9DD6AA011D3912CBC0E5F3EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -375,19 +375,19 @@
 			shellScript = "set -o errexit\n\n\"${PROJECT_DIR}/../download_required_libs.sh\"";
 			showEnvVarsInLog = 0;
 		};
-		2DC375A01D6FDDCF005A486F /* Run Script - XcodeCoverage */ = {
+		2DC375A01D6FDDCF005A486F /* XcodeCoverage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script - XcodeCoverage";
+			name = XcodeCoverage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nif [[ -d $PROJECT_DIR/Pods/XcodeCoverage ]]; then\n    cd $PROJECT_DIR/Pods/XcodeCoverage\n    ./cleancov\n    ./exportenv.sh\nfi\n";
+			shellScript = "exit 0\n\nif [[ -d $PROJECT_DIR/Pods/XcodeCoverage ]]; then\n    cd $PROJECT_DIR/Pods/XcodeCoverage\n    ./cleancov\n    ./exportenv.sh\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		437A5F3F03E3B0AF0FAF4A55 /* [CP] Copy Pods Resources */ = {
@@ -661,6 +661,13 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL-Universal\"",
+					"\"${PODS_ROOT}/Headers/Public/XcodeCoverage\"",
+					"\"$(PROJECT_DIR)/../components/catch/include\"",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 			};
 			name = Debug;
@@ -675,6 +682,13 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL-Universal\"",
+					"\"${PODS_ROOT}/Headers/Public/XcodeCoverage\"",
+					"\"$(PROJECT_DIR)/../components/catch/include\"",
+				);
 			};
 			name = Release;
 		};
