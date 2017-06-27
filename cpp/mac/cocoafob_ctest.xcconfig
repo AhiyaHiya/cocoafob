@@ -6,6 +6,6 @@
 //  Copyright © 2016 Jaime O. Rios. All rights reserved.
 //
 
-#include "cocoafob.xcconfig"
+
 #include "Pods/Target Support Files/Pods-cocoafob_ctest/Pods-cocoafob_ctest.debug.xcconfig"
 #include "Pods/XcodeCoverage/XcodeCoverage.xcconfig"

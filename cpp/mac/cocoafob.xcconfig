@@ -10,8 +10,6 @@ GCC_C_LANGUAGE_STANDARD     = c11
 CLANG_CXX_LANGUAGE_STANDARD = c++14
 CLANG_CXX_LIBRARY           = libc++
 
-//OTHER_LDFLAGS = $PROJECT_DIR/components/openssl/lib/libcrypto.a $PROJECT_DIR/components/openssl/lib/libssl.a
-
-HEADER_SEARCH_PATHS = $PROJECT_DIR/../components/catch/include
-
 MACOSX_DEPLOYMENT_TARGET = 10.10
+
+HEADER_SEARCH_PATHS = ${PROJECT_DIR}/../components/catch/include
