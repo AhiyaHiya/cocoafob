@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2D4C86091F107AA7006D9A03 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2D4C860C1F107AA7006D9A03 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				2D4C86111F107AC0006D9A03 /* ShellScript */,
+			);
+			dependencies = (
+				2D4C86131F107E17006D9A03 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		016CBE8D86C81824D72A70DB /* libPods-cocoafob_ctest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B176D9166CA638BB4036B676 /* libPods-cocoafob_ctest.a */; };
 		2D153B2D1D73DA7F00B4273D /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D153B291D73DA7F00B4273D /* decoder.c */; };
@@ -38,6 +53,16 @@
 		B318ECE3654E10928E304BE3 /* libPods-static lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 312D82E6C8E4B7CF5A338E34 /* libPods-static lib.a */; };
 		E2283F2AA551C158B6C0F5F9 /* libPods-cocoafob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBEFE7613A815436E64ECFA /* libPods-cocoafob.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D4C86121F107E17006D9A03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D15DA671CEB6273001F85AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DE01CCC1DAF1CF300F8F4E1;
+			remoteInfo = "static lib";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		2D15DA6D1CEB6274001F85AE /* CopyFiles */ = {
@@ -333,6 +358,11 @@
 					2D15DA6E1CEB6274001F85AE = {
 						CreatedOnToolsVersion = 7.3;
 					};
+					2D4C86091F107AA7006D9A03 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TDSF4SSH27;
+						ProvisioningStyle = Automatic;
+					};
 					2DE01CCC1DAF1CF300F8F4E1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 6Y9B2NECZ9;
@@ -355,11 +385,25 @@
 				2D15DA6E1CEB6274001F85AE /* cocoafob */,
 				2DBB60371CEB882700105970 /* cocoafob_ctest */,
 				2DE01CCC1DAF1CF300F8F4E1 /* static lib */,
+				2D4C86091F107AA7006D9A03 /* install */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D4C86111F107AC0006D9A03 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -o nounset\nset -o errexit\n\necho \"Products being placed in folder: $PROJECT_DIR/dist\"\n\nif [[ -d $BUILT_PRODUCTS_DIR/dist ]]; then\n    rm -Rf $BUILT_PRODUCTS_DIR/dist\nfi\n\nmkdir -p $BUILT_PRODUCTS_DIR/dist/include\nmkdir -p $BUILT_PRODUCTS_DIR/dist/lib\n\ncp -Rv $PROJECT_DIR/../include/ $BUILT_PRODUCTS_DIR/dist/include/\n\n[ \"$CONFIGURATION\" = Debug ] &&\n    SUFFIX=sd.a ||\n    SUFFIX=s.a\n\ncp -v $BUILT_PRODUCTS_DIR/libcocoafob_${SUFFIX} $BUILT_PRODUCTS_DIR/dist/lib/\n\nmv $BUILT_PRODUCTS_DIR/dist $PROJECT_DIR/dist";
+		};
 		2D7E28801F01D5CE000C973A /* Download catch c++ header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,6 +577,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2D4C86131F107E17006D9A03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DE01CCC1DAF1CF300F8F4E1 /* static lib */;
+			targetProxy = 2D4C86121F107E17006D9A03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		2D15DA741CEB6274001F85AE /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -631,6 +683,22 @@
 			};
 			name = Release;
 		};
+		2D4C860A1F107AA7006D9A03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TDSF4SSH27;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2D4C860B1F107AA7006D9A03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TDSF4SSH27;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2DBB603E1CEB882700105970 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D29A33E1D9B5170007F3038 /* cocoafob_ctest.xcconfig */;
@@ -655,7 +723,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D8A225A1DAF203500CE8FB3 /* cocoafob_static_debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				DEVELOPMENT_TEAM = 6Y9B2NECZ9;
 				EXECUTABLE_PREFIX = lib;
@@ -676,7 +744,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D8A225B1DAF203500CE8FB3 /* cocoafob_static_release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				DEVELOPMENT_TEAM = 6Y9B2NECZ9;
 				EXECUTABLE_PREFIX = lib;
@@ -712,6 +780,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2D4C860C1F107AA7006D9A03 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D4C860A1F107AA7006D9A03 /* Debug */,
+				2D4C860B1F107AA7006D9A03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		2DBB603D1CEB882700105970 /* Build configuration list for PBXNativeTarget "cocoafob_ctest" */ = {
 			isa = XCConfigurationList;
