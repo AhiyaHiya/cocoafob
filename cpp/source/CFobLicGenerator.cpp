@@ -7,9 +7,9 @@
 //
 
 #include "CFobLicGenerator.hpp"
-#import <openssl/err.h>
-#import <openssl/evp.h>
-#import <openssl/pem.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
 
 #include "CFobInternal.hpp"
 #include <vector>
@@ -35,7 +35,7 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) const -> s
 {
     if (name.length() == 0)
     {
-        return {false, "Non-empty string required for name parameter"};
+        return std::make_tuple(false, "Non-empty string required for name parameter");
     }
 
     auto digest = std::vector<uint8_t>(SHA_DIGEST_LENGTH, 0);
@@ -52,7 +52,7 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) const -> s
 
     if (!check)
     {
-        return {false, "Signing failed"};
+        return std::make_tuple(false, "Signing failed");
     }
 
     const auto bufSize = base32_encoder_buffer_size(siglen);
@@ -66,6 +66,6 @@ auto CFobLicGenerator::GenerateRegCodeForName(const std::string name) const -> s
 
     const auto regCode = CFob::Internal::FormatBase32EncodedString(buffer.data());
 
-    return {true, regCode};
+    return std::make_tuple(true, regCode);
 }
 }

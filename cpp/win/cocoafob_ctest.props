@@ -5,12 +5,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir>$(SolutionDir)$(Configuration)\ctest\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\ctest\</IntDir>
+    <OutDir>$(SolutionDir)ctest\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)ctest\int\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>.\base32\;..\include\;..\ctest\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\jaimerios\Development\GitHub\cocoafob\cpp\source\base32;.\base32\;..\include\;..\ctest\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <ProgramDatabaseFile>$(OutDir)$(TargetName)_CTEST.pdb</ProgramDatabaseFile>

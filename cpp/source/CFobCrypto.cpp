@@ -8,9 +8,9 @@
 
 #include "CFobCrypto.hpp"
 
-#import <openssl/err.h>
-#import <openssl/evp.h>
-#import <openssl/pem.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
 
 using namespace std::string_literals;
 
@@ -21,7 +21,7 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
 {
     if (publicKeyPEM.length() == 0)
     {
-        return {false, "Empty PEM string detected"s, nullptr};
+        return std::make_tuple(false, "Empty PEM string detected"s, nullptr);
     }
 
     const auto completeKey = IsPublicKeyComplete(publicKeyPEM) ? publicKeyPEM : CompletePublicKeyPEM(publicKeyPEM);
@@ -34,7 +34,7 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
 
     if (result != nullptr)
     {
-        return {true, "Success"s, dsa};
+        return std::make_tuple(true, "Success"s, dsa);
     }
     else
     {
@@ -42,7 +42,7 @@ auto CreateDSAPubKeyFromPublicKeyPEM(const std::string publicKeyPEM) -> std::tup
         ERR_print_errors_fp(stdout);
 #endif
         const auto message = std::string{ERR_error_string(ERR_get_error(), nullptr)};
-        return {false, message, nullptr};
+        return std::make_tuple(false, message, nullptr);
     }
 }
 
@@ -50,7 +50,7 @@ auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::
 {
     if (privateKey.length() == 0)
     {
-        return {false, "Empty PEM string detected"s, nullptr};
+        return std::make_tuple(false, "Empty PEM string detected"s, nullptr);
     }
 
     ERR_load_crypto_strings();
@@ -61,7 +61,7 @@ auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::
 
     if (result != nullptr)
     {
-        return {true, "Success"s, dsa};
+        return std::make_tuple(true, "Success"s, dsa);
     }
     else
     {
@@ -69,7 +69,7 @@ auto CreateDSAPrivateKeyFromPrivateKeyPEM(const std::string privateKey) -> std::
         ERR_print_errors_fp(stdout);
 #endif
         const auto message = std::string{ERR_error_string(ERR_get_error(), nullptr)};
-        return {false, message, nullptr};
+        return std::make_tuple(false, message, nullptr);
     }
 }
 

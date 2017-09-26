@@ -157,7 +157,13 @@
     <ClCompile Include="..\ctest\CFobLicVerifier_ctest.cpp" />
     <ClCompile Include="..\ctest\CFobMain.cpp" />
     <ClCompile Include="..\ctest\CFob_ctest_common.cpp" />
+    <ClCompile Include="..\source\base32\decoder.c" />
+    <ClCompile Include="..\source\base32\encoder.c" />
     <ClCompile Include="..\source\CFobCrypto.cpp" />
+    <ClCompile Include="..\source\CFobDSAKeyPEM.cpp" />
+    <ClCompile Include="..\source\CFobInternal.cpp" />
+    <ClCompile Include="..\source\CFobLicGenerator.cpp" />
+    <ClCompile Include="..\source\CFobLicVerifier.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

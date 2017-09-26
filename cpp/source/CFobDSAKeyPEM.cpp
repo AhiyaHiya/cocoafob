@@ -9,9 +9,9 @@
 #include "CFobDSAKeyPEM.hpp"
 #include "CFobCrypto.hpp"
 
-#import <openssl/err.h>
-#import <openssl/evp.h>
-#import <openssl/pem.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
 
 using namespace std::string_literals;
 
