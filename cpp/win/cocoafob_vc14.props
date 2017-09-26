@@ -4,7 +4,10 @@
     <Import Project="conanbuildinfo.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)\vsbuild\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\vsbuild\int\$(Configuration)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>..\source\base32\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
