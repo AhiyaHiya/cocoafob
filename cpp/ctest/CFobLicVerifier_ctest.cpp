@@ -81,21 +81,22 @@ SCENARIO("License verifier should handle bad data gracefully", "[verifier]")
         }
     }
 }
-#if (0)
+
 SCENARIO("License verifier should handle good data", "[verifier]")
 {
     GIVEN("A constructed non-nullptr instance to license verifier")
     {
-        auto publicKey = GetPublicKey();
-        auto licenseVer = CreateCFobLicVerifier(publicKey);
-        REQUIRE(licenseVer != nullptr);
+        const auto pubKey = GetPublicKey();
+        const auto key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+        
+        const auto licenseVer = cocoafob::CFobLicVerifier(std::forward<const cocoafob::CFobDSAKeyPEM>(key));
 
         WHEN("Good data is passed in")
         {
             const auto regCode = GetRegCode();
             const auto name = std::string{"Joe Bloggs"};
 
-            auto result = licenseVer->VerifyRegCodeForName(regCode, name);
+            auto result = licenseVer.VerifyRegCodeForName(regCode, name);
 
             THEN("The result should not have any error")
             {
@@ -113,16 +114,16 @@ SCENARIO("License verifier should work with complete PEM key", "[verifier] [publ
 {
     GIVEN("A constructed non-nullptr instance to license verifier")
     {
-        const auto publicKey = GetPublicKey();
-        const auto licenseVer = CreateCFobLicVerifier(publicKey);
-        REQUIRE(licenseVer != nullptr);
+        const auto pubKey = GetPartialPublicKey();
+        const auto key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+        const auto licenseVer = cocoafob::CFobLicVerifier(std::forward<const cocoafob::CFobDSAKeyPEM>(key));
 
         WHEN("Good data is passed in")
         {
             const auto regCode = GetRegCode();
             const auto name = std::string{"Joe Bloggs"};
 
-            const auto result = licenseVer->VerifyRegCodeForName(regCode, name);
+            const auto result = licenseVer.VerifyRegCodeForName(regCode, name);
 
             THEN("The result should not have any error")
             {
@@ -135,8 +136,6 @@ SCENARIO("License verifier should work with complete PEM key", "[verifier] [publ
         }
     }
 }
-
-#endif
 
 TEST_CASE("Exercise verifier", "[verifier]")
 {
