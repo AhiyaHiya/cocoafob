@@ -56,18 +56,19 @@ SCENARIO("License generators should be created when a public key is passed in", 
     }
 }
 
-#if (0)
+
 SCENARIO("License verifier should handle bad data gracefully", "[verifier]")
 {
     GIVEN("A constructed non-nullptr instance to license verifier")
     {
-        auto publicKey = GetPublicKey();
-        auto licenseVer = cocoafob::CFobLicVerifier(publicKey);
-        REQUIRE(licenseVer != nullptr);
+        const auto pubKey = GetPartialPublicKey();
+        const auto key = cocoafob::CFobDSAKeyPEM{cocoafob::KeyType::Public, pubKey};
+        
+        const auto licenseVer = cocoafob::CFobLicVerifier(std::forward<const cocoafob::CFobDSAKeyPEM>(key));
 
         WHEN("Bad data is passed in")
         {
-            auto result = licenseVer->VerifyRegCodeForName("", "");
+            auto result = licenseVer.VerifyRegCodeForName("", "");
 
             THEN("The result should point to an error of some sort")
             {
@@ -80,7 +81,7 @@ SCENARIO("License verifier should handle bad data gracefully", "[verifier]")
         }
     }
 }
-
+#if (0)
 SCENARIO("License verifier should handle good data", "[verifier]")
 {
     GIVEN("A constructed non-nullptr instance to license verifier")
