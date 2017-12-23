@@ -6,6 +6,13 @@
 //  Copyright © 2016 Jaime O. Rios. All rights reserved.
 //
 
+/*
+ COMMANDS
+ openssl dsaparam -out dsaparam.pem 512
+ openssl gendsa -out privkey.pem dsaparam.pem
+ openssl dsa -in privkey.pem -pubout -out pubkey.pem
+ */
+
 #include "CFob_ctest_common.hpp"
 
 auto GetPartialPublicKey() -> std::string

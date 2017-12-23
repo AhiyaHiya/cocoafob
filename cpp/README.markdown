@@ -25,6 +25,13 @@ Xcode and Visual Studio projects are provided for this port.
 ### Download script
 (macOS only) A bash shell script named download_required_libs.sh is in the same directory as this README file and is used by the Xcode project for downloading the Catch from source and places the headers in the components directory.
 
+### For generating new Public Private Keys
+Here are the terminal commands for doing so:
+openssl dsaparam -out dsaparam.pem 512
+openssl gendsa -out privkey.pem dsaparam.pem
+openssl dsa -in privkey.pem -pubout -out pubkey.pem
+
+
 
 ### Managed Libs
 * OpenSSL 1_0_2 stable release
