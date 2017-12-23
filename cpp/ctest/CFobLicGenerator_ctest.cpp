@@ -26,11 +26,11 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
 
         const auto name = "decloner|Joe Bloggs"s;
 
-        const auto values = generator.GenerateRegCodeForName(name);
-        const auto sucess = std::get<0>(values);
-        const auto registrationCode = std::get<1>(values);
+        const auto genResult = generator.GenerateRegCodeForName(name);
+        const auto genSuccess = std::get<0>(genResult);
+        const auto registrationCode = std::get<1>(genResult);
 
-        CHECK(sucess);
+        CHECK(genSuccess);
 
         CHECK(registrationCode != "");
 
@@ -39,10 +39,10 @@ SCENARIO("With valid data, generator should create registration code", "[base] [
 
         const auto licenseVer = cocoafob::CFobLicVerifier(std::forward<const cocoafob::CFobDSAKeyPEM>(pubKey));
 
-        const auto result = licenseVer.VerifyRegCodeForName(registrationCode, name);
+        const auto verResult = licenseVer.VerifyRegCodeForName(registrationCode, name);
 
-        const auto success = std::get<0>(result);
-        CHECK(success);
+        const auto verSuccess = std::get<0>(verResult);
+        CHECK(verSuccess);
     }
     catch (...)
     {
