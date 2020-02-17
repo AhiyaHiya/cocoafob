@@ -259,15 +259,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\source\base32\decoder.c" />
-    <ClCompile Include="..\source\CFobCrypto.cpp" />
-    <ClCompile Include="..\source\CFobDSAKeyPEM.cpp" />
-    <ClCompile Include="..\source\CFobInternal.cpp" />
-    <ClCompile Include="..\source\CFobLicGenerator.cpp" />
-    <ClCompile Include="..\source\CFobLicVerifier.cpp" />
+    <ClCompile Include="..\..\source\base32\decoder.c" />
+    <ClCompile Include="..\..\source\CFobCrypto.cpp" />
+    <ClCompile Include="..\..\source\CFobDSAKeyPEM.cpp" />
+    <ClCompile Include="..\..\source\CFobInternal.cpp" />
+    <ClCompile Include="..\..\source\CFobLicGenerator.cpp" />
+    <ClCompile Include="..\..\source\CFobLicVerifier.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\source\CFobInternal.hpp" />
+    <ClInclude Include="..\..\source\CFobInternal.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="conanfile.txt" />

@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\jaimerios\Development\GitHub\cocoafob\cpp\source\base32;.\base32\;..\include\;..\ctest\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\base32\;..\..\include\;..\..\ctest\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <ProgramDatabaseFile>$(OutDir)$(TargetName)_CTEST.pdb</ProgramDatabaseFile>

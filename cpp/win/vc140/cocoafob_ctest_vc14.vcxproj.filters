@@ -21,7 +21,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\source\base32\decoder.h">
+    <ClInclude Include="..\..\source\base32\decoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,43 +29,43 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ctest\CFob_ctest_common.cpp">
+    <ClCompile Include="..\..\ctest\CFob_ctest_common.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ctest\CFobCrypto_ctest.cpp">
+    <ClCompile Include="..\..\ctest\CFobCrypto_ctest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ctest\CFobDSAKeyPEM_ctest.cpp">
+    <ClCompile Include="..\..\ctest\CFobDSAKeyPEM_ctest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ctest\CFobLicGenerator_ctest.cpp">
+    <ClCompile Include="..\..\ctest\CFobLicGenerator_ctest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ctest\CFobLicVerifier_ctest.cpp">
+    <ClCompile Include="..\..\ctest\CFobLicVerifier_ctest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ctest\CFobMain.cpp">
+    <ClCompile Include="..\..\ctest\CFobMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\CFobCrypto.cpp">
+    <ClCompile Include="..\..\source\CFobCrypto.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\CFobDSAKeyPEM.cpp">
+    <ClCompile Include="..\..\source\CFobDSAKeyPEM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\CFobInternal.cpp">
+    <ClCompile Include="..\..\source\CFobInternal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\CFobLicGenerator.cpp">
+    <ClCompile Include="..\..\source\CFobLicGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\CFobLicVerifier.cpp">
+    <ClCompile Include="..\..\source\CFobLicVerifier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\base32\decoder.c">
+    <ClCompile Include="..\..\source\base32\decoder.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\source\base32\encoder.c">
+    <ClCompile Include="..\..\source\base32\encoder.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
