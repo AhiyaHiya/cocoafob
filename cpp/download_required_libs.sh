@@ -12,9 +12,9 @@ SetupCatch()
     
     if [[ ! -d ${CFOB_CURRENT_PATH}/components/catch/ ]]; then
         
-        mkdir -p ${CFOB_CURRENT_PATH}/components/catch/include/
-        cd ${CFOB_CURRENT_PATH}/components/catch/include/
-        curl -O https://raw.githubusercontent.com/philsquared/Catch/master/single_include/catch.hpp
+        mkdir -p ${CFOB_CURRENT_PATH}/components/catch/include/catch2/
+        cd ${CFOB_CURRENT_PATH}/components/catch/include/catch2/
+        curl -L -O https://github.com/catchorg/Catch2/releases/download/v2.11.1/catch.hpp
         cd $CFOB_CURRENT_PATH
         printf "*********************************\n"
     fi
