@@ -7,7 +7,7 @@
 //
 
 #include "CFobCrypto.hpp"
-#include "catch.hpp"
+#include "catch2/catch.hpp"
 
 SCENARIO("Public key exercise", "[utility]")
 {
