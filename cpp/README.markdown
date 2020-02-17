@@ -27,6 +27,8 @@ Note: CocoaPods is used for managing the external libraries required by the Xcod
 ### Download script
 (macOS only) A bash shell script named download_required_libs.sh is in the same directory as this README file and is used by the Xcode project for downloading the Catch from source and places the headers in the components directory.
 
+The catch unit test header file is not available via CocoaPods, which is why it is downloaded using a bash shell script.
+
 ### For generating new Public Private Keys
 Here are the terminal commands for doing so:
 openssl dsaparam -out dsaparam.pem 512
