@@ -13,6 +13,8 @@
 #include <openssl/evp.h>
 #include <openssl/pem.h>
 
+#include <stdexcept>
+
 using namespace std::string_literals;
 
 namespace cocoafob
