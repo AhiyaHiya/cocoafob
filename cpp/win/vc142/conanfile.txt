@@ -1,0 +1,9 @@
+[requires]
+Catch2/2.11.1@catchorg/stable 
+OpenSSL/1.0.2s@conan/stable 
+
+[generators]
+visual_studio
+
+[imports]
+bin, *.dll -> ./bin # Copies all dll files from packages bin folder to my "bin" folder
